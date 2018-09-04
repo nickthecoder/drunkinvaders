@@ -1,0 +1,14 @@
+
+{
+  "director": "uk.co.nickthecoder.tickle.NoDirector",
+  "background": "#000000",
+  "showMouse": true,
+  "layout": "default",
+  "stages": [
+    {
+      "name": "main",
+      "actors": [
+      ]
+    }
+  ]
+}

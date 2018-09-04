@@ -1,0 +1,36 @@
+
+buildscript {
+    ext.kotlin_version = '1.1.3-2'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "uk.co.nickthecoder.drunkinvaders.DrunkInvadersKt"
+
+defaultTasks 'installDist'
+
+version = '0.1'
+group = 'uk.co.nickthecoder'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'uk.co.nickthecoder:tickle-core:0.1'
+    compile 'uk.co.nickthecoder:tickle-editor:0.1'
+    //compile 'org.reflections:reflections:0.9.11'
+    compile 'uk.co.nickthecoder:tickle-groovy:0.1'
+}
+

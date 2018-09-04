@@ -1,0 +1,43 @@
+
+{
+  "info": {
+    "title": "Drunk Invaders",
+    "width": 640,
+    "height": 480,
+    "initialScene": "menu",
+    "testScene": "menu",
+    "producer": "uk.co.nickthecoder.tickle.NoProducer"
+  },
+  "preferences": {
+    "outputFormat": "PRETTY",
+    "packages": [
+      "uk.co.nickthecoder.tickle",
+      "uk.co.nickthecoder.drunkinvaders"
+    ]
+  },
+  "layouts": [
+    {
+      "name": "default",
+      "stages": [
+        {
+          "name": "main",
+          "isDefault": true,
+          "stage": "uk.co.nickthecoder.tickle.stage.GameStage",
+          "constraint": "uk.co.nickthecoder.tickle.resources.NoStageConstraint"
+        }
+      ],
+      "views": [
+        {
+          "name": "main",
+          "view": "uk.co.nickthecoder.tickle.stage.ZOrderStageView",
+          "stage": "main",
+          "zOrder": 50,
+          "hAlignment": "LEFT",
+          "leftRightMargin": 0,
+          "vAlignment": "TOP",
+          "topBottomMargin": 0
+        }
+      ]
+    }
+  ]
+}
