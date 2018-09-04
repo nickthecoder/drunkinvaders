@@ -1,13 +1,129 @@
-
 {
   "director": "uk.co.nickthecoder.tickle.NoDirector",
   "background": "#000000",
   "showMouse": true,
   "layout": "default",
+  "snapToGrid": {
+    "enabled": false,
+    "xSpacing": 50,
+    "ySpacing": 50,
+    "xOffset": 0,
+    "yOffset": 0,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapToGuides": {
+    "enabled": true,
+    "closeness": 5,
+    "x": [
+      
+    ],
+    "y": [
+      
+    ]
+  },
+  "snapToOthers": {
+    "enabled": true,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapRotation": {
+    "enabled": true,
+    "step": 15,
+    "closeness": 15
+  },
+  "include": [
+    
+  ],
   "stages": [
     {
       "name": "main",
       "actors": [
+        {
+          "costume": "quitButton",
+          "x": 625,
+          "y": 9,
+          "text": "Quit",
+          "textHAlignment": "RIGHT",
+          "textColor": "#b31a1aff",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "sceneButton",
+          "x": 318,
+          "y": 273,
+          "text": "Play",
+          "textHAlignment": "CENTER",
+          "textVAlignment": "CENTER",
+          "textColor": "#b3ccffff",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "play"
+            }
+          ]
+        },
+        {
+          "costume": "earth1",
+          "x": 0,
+          "y": 0,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "sceneButton",
+          "x": 314,
+          "y": 196,
+          "text": "About",
+          "textHAlignment": "CENTER",
+          "textVAlignment": "CENTER",
+          "textColor": "#b3ccffff",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "about"
+            }
+          ]
+        },
+        {
+          "costume": "title",
+          "x": 324,
+          "y": 463,
+          "text": "Drunk Invaders",
+          "textHAlignment": "CENTER",
+          "textVAlignment": "TOP",
+          "textColor": "#b380b3ff",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "ship",
+          "x": 318,
+          "y": 66,
+          "zOrder": 0,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "mothership",
+          "x": 687,
+          "y": 460,
+          "zOrder": 0,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        }
       ]
     }
   ]

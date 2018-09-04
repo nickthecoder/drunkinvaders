@@ -1,9 +1,11 @@
-
 {
   "info": {
     "title": "Drunk Invaders",
+    "id": "ticklegame",
     "width": 640,
     "height": 480,
+    "resizable": true,
+    "fullScreen": false,
     "initialScene": "menu",
     "testScene": "menu",
     "producer": "uk.co.nickthecoder.tickle.NoProducer"
@@ -13,7 +15,13 @@
     "packages": [
       "uk.co.nickthecoder.tickle",
       "uk.co.nickthecoder.drunkinvaders"
-    ]
+    ],
+    "treeThumbnailSize": 24,
+    "costumePickerThumbnailSize": 40,
+    "isMaximized": true,
+    "windowWidth": 1000,
+    "windowHeight": 600,
+    "apiURL": "http://nickthecoder.co.uk/public/tickle/api-0.1/tickle-core/"
   },
   "layouts": [
     {
@@ -36,6 +44,354 @@
           "leftRightMargin": 0,
           "vAlignment": "TOP",
           "topBottomMargin": 0
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "graphics",
+      "file": "images/graphics.png"
+    },
+    {
+      "name": "earth1",
+      "file": "images/earth1.png"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "blackCasper",
+      "file": "fonts/BlackCasper/BlackCasper.ttf",
+      "size": 56,
+      "xPadding": 5,
+      "yPadding": 5
+    },
+    {
+      "name": "boycott",
+      "file": "fonts/Boycott/Boycott.ttf",
+      "size": 80,
+      "xPadding": 1,
+      "yPadding": 1
+    }
+  ],
+  "poses": [
+    {
+      "name": "alien1a",
+      "texture": "graphics",
+      "left": 0,
+      "bottom": 37,
+      "right": 37,
+      "top": 0,
+      "offsetX": 18,
+      "offsetY": 18,
+      "direction": 0
+    },
+    {
+      "name": "alien2b",
+      "texture": "graphics",
+      "left": 38,
+      "bottom": 76,
+      "right": 88,
+      "top": 38,
+      "offsetX": 25,
+      "offsetY": 19,
+      "direction": 0
+    },
+    {
+      "name": "alien3a",
+      "texture": "graphics",
+      "left": 91,
+      "bottom": 38,
+      "right": 145,
+      "top": 0,
+      "offsetX": 27,
+      "offsetY": 19,
+      "direction": 0
+    },
+    {
+      "name": "alien1b",
+      "texture": "graphics",
+      "left": 0,
+      "bottom": 75,
+      "right": 37,
+      "top": 38,
+      "offsetX": 18,
+      "offsetY": 18,
+      "direction": 0
+    },
+    {
+      "name": "alien2a",
+      "texture": "graphics",
+      "left": 38,
+      "bottom": 38,
+      "right": 88,
+      "top": 0,
+      "offsetX": 25,
+      "offsetY": 19,
+      "direction": 0
+    },
+    {
+      "name": "alien3b",
+      "texture": "graphics",
+      "left": 91,
+      "bottom": 77,
+      "right": 145,
+      "top": 39,
+      "offsetX": 27,
+      "offsetY": 19,
+      "direction": 0
+    },
+    {
+      "name": "ship1",
+      "texture": "graphics",
+      "left": 219,
+      "bottom": 33,
+      "right": 277,
+      "top": 0,
+      "offsetX": 30,
+      "offsetY": 10,
+      "direction": 0
+    },
+    {
+      "name": "ship2",
+      "texture": "graphics",
+      "left": 221,
+      "bottom": 67,
+      "right": 279,
+      "top": 36,
+      "offsetX": 30,
+      "offsetY": 10,
+      "direction": 0
+    },
+    {
+      "name": "earth1",
+      "texture": "earth1",
+      "left": 0,
+      "bottom": 479,
+      "right": 639,
+      "top": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "direction": 0
+    },
+    {
+      "name": "mothership",
+      "texture": "graphics",
+      "left": 147,
+      "bottom": 35,
+      "right": 218,
+      "top": 0,
+      "offsetX": 37,
+      "offsetY": 16,
+      "direction": 0
+    }
+  ],
+  "costumeGroups": [
+    {
+      "name": "menu",
+      "costumes": [
+        {
+          "name": "quitButton",
+          "role": "uk.co.nickthecoder.tickle.util.QuitButton",
+          "canRotate": false,
+          "zOrder": 90,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "textStyles": [
+                {
+                  "font": "blackCasper",
+                  "halign": "LEFT",
+                  "valign": "BOTTOM",
+                  "color": "#ffffffff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sceneButton",
+          "role": "uk.co.nickthecoder.tickle.util.SceneButton",
+          "canRotate": false,
+          "zOrder": 90,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "textStyles": [
+                {
+                  "font": "blackCasper",
+                  "halign": "LEFT",
+                  "valign": "BOTTOM",
+                  "color": "#ffffffff"
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "scene",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "name": "title",
+          "role": "",
+          "canRotate": false,
+          "zOrder": 90,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "textStyles": [
+                {
+                  "font": "boycott",
+                  "halign": "LEFT",
+                  "valign": "BOTTOM",
+                  "color": "#ffffffff"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "showInSceneEditor": true
+    },
+    {
+      "name": "backgrounds",
+      "costumes": [
+        {
+          "name": "earth1",
+          "role": "",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "earth1"
+              ]
+            }
+          ]
+        }
+      ],
+      "showInSceneEditor": true
+    }
+  ],
+  "costumes": [
+    {
+      "name": "ship",
+      "role": "Ship",
+      "canRotate": false,
+      "zOrder": 50,
+      "initialEvent": "default",
+      "showInSceneEditor": true,
+      "events": [
+        {
+          "name": "default",
+          "poses": [
+            "ship1"
+          ]
+        },
+        {
+          "name": "reloading",
+          "poses": [
+            "ship2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mothership",
+      "role": "Mothership",
+      "canRotate": false,
+      "zOrder": 40,
+      "initialEvent": "default",
+      "showInSceneEditor": true,
+      "events": [
+        {
+          "name": "default",
+          "poses": [
+            "mothership"
+          ]
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "name": "left",
+      "keys": [
+        {
+          "key": "Left",
+          "state": "PRESSED"
+        },
+        {
+          "key": "A",
+          "state": "PRESSED"
+        }
+      ]
+    },
+    {
+      "name": "right",
+      "keys": [
+        {
+          "key": "Right",
+          "state": "PRESSED"
+        },
+        {
+          "key": "D",
+          "state": "PRESSED"
+        }
+      ]
+    },
+    {
+      "name": "escape",
+      "keys": [
+        {
+          "key": "Esc",
+          "state": "PRESSED"
+        }
+      ]
+    },
+    {
+      "name": "fire",
+      "keys": [
+        {
+          "key": "Space",
+          "state": "PRESSED"
+        },
+        {
+          "key": "Enter",
+          "state": "PRESSED"
+        }
+      ]
+    },
+    {
+      "name": "shield",
+      "keys": [
+        {
+          "key": "Right Shift",
+          "state": "PRESSED"
+        },
+        {
+          "key": "Left Shift",
+          "state": "PRESSED"
+        },
+        {
+          "key": "Right Control",
+          "state": "PRESSED"
+        },
+        {
+          "key": "Left Control",
+          "state": "PRESSED"
         }
       ]
     }
