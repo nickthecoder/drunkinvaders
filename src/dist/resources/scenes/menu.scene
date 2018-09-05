@@ -52,8 +52,8 @@
         },
         {
           "costume": "sceneButton",
-          "x": 318,
-          "y": 273,
+          "x": 319,
+          "y": 308,
           "text": "Play",
           "textHAlignment": "CENTER",
           "textVAlignment": "CENTER",
@@ -79,7 +79,7 @@
         {
           "costume": "sceneButton",
           "x": 314,
-          "y": 196,
+          "y": 236,
           "text": "About",
           "textHAlignment": "CENTER",
           "textVAlignment": "CENTER",
@@ -108,10 +108,10 @@
         },
         {
           "costume": "ship",
-          "x": 318,
-          "y": 66,
+          "x": 325,
+          "y": 89,
           "zOrder": 0,
-          "direction": 0,
+          "direction": 90,
           "scaleX": 1,
           "scaleY": 1
         },
@@ -121,6 +121,30 @@
           "y": 460,
           "zOrder": 0,
           "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "shieldFactory",
+          "x": 116,
+          "y": 119,
+          "direction": 14.999999999999998,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "shieldFactory",
+          "x": 323,
+          "y": 143,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "shieldFactory",
+          "x": 497,
+          "y": 114,
+          "direction": 345,
           "scaleX": 1,
           "scaleY": 1
         }

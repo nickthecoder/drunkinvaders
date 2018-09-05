@@ -7,8 +7,8 @@
     "resizable": true,
     "fullScreen": false,
     "initialScene": "menu",
-    "testScene": "menu",
-    "producer": "uk.co.nickthecoder.tickle.NoProducer"
+    "testScene": "earth1",
+    "producer": "DrunkInvaders"
   },
   "preferences": {
     "outputFormat": "PRETTY",
@@ -18,7 +18,7 @@
     ],
     "treeThumbnailSize": 24,
     "costumePickerThumbnailSize": 40,
-    "isMaximized": true,
+    "isMaximized": false,
     "windowWidth": 1000,
     "windowHeight": 600,
     "apiURL": "http://nickthecoder.co.uk/public/tickle/api-0.1/tickle-core/"
@@ -84,7 +84,7 @@
       "top": 0,
       "offsetX": 18,
       "offsetY": 18,
-      "direction": 0
+      "direction": -90
     },
     {
       "name": "alien2b",
@@ -95,7 +95,7 @@
       "top": 38,
       "offsetX": 25,
       "offsetY": 19,
-      "direction": 0
+      "direction": -90
     },
     {
       "name": "alien3a",
@@ -106,7 +106,7 @@
       "top": 0,
       "offsetX": 27,
       "offsetY": 19,
-      "direction": 0
+      "direction": -90
     },
     {
       "name": "alien1b",
@@ -117,7 +117,7 @@
       "top": 38,
       "offsetX": 18,
       "offsetY": 18,
-      "direction": 0
+      "direction": -90
     },
     {
       "name": "alien2a",
@@ -128,7 +128,7 @@
       "top": 0,
       "offsetX": 25,
       "offsetY": 19,
-      "direction": 0
+      "direction": -90
     },
     {
       "name": "alien3b",
@@ -139,7 +139,7 @@
       "top": 39,
       "offsetX": 27,
       "offsetY": 19,
-      "direction": 0
+      "direction": -90
     },
     {
       "name": "ship1",
@@ -150,7 +150,7 @@
       "top": 0,
       "offsetX": 30,
       "offsetY": 10,
-      "direction": 0
+      "direction": 90
     },
     {
       "name": "ship2",
@@ -161,7 +161,7 @@
       "top": 36,
       "offsetX": 30,
       "offsetY": 10,
-      "direction": 0
+      "direction": 90
     },
     {
       "name": "earth1",
@@ -184,6 +184,94 @@
       "offsetX": 37,
       "offsetY": 16,
       "direction": 0
+    },
+    {
+      "name": "alienBullet1",
+      "texture": "graphics",
+      "left": 0,
+      "bottom": 93,
+      "right": 13,
+      "top": 76,
+      "offsetX": 5,
+      "offsetY": 8,
+      "direction": -90
+    },
+    {
+      "name": "alienBullet2",
+      "texture": "graphics",
+      "left": 12,
+      "bottom": 93,
+      "right": 25,
+      "top": 76,
+      "offsetX": 5,
+      "offsetY": 8,
+      "direction": -90
+    },
+    {
+      "name": "bullet",
+      "texture": "graphics",
+      "left": 24,
+      "bottom": 92,
+      "right": 33,
+      "top": 75,
+      "offsetX": 5,
+      "offsetY": 9,
+      "direction": 90
+    },
+    {
+      "name": "shieldFactory",
+      "texture": "graphics",
+      "left": 43,
+      "bottom": 120,
+      "right": 99,
+      "top": 96,
+      "offsetX": 29,
+      "offsetY": 11,
+      "direction": 0
+    },
+    {
+      "name": "shieldNW",
+      "texture": "graphics",
+      "left": 62,
+      "bottom": 95,
+      "right": 77,
+      "top": 79,
+      "offsetX": 11,
+      "offsetY": 4,
+      "direction": 0
+    },
+    {
+      "name": "shieldNE",
+      "texture": "graphics",
+      "left": 78,
+      "bottom": 94,
+      "right": 93,
+      "top": 79,
+      "offsetX": 10,
+      "offsetY": 3,
+      "direction": 0
+    },
+    {
+      "name": "shield",
+      "texture": "graphics",
+      "left": 95,
+      "bottom": 94,
+      "right": 111,
+      "top": 78,
+      "offsetX": 11,
+      "offsetY": 3,
+      "direction": 0
+    },
+    {
+      "name": "alienFactory",
+      "texture": "graphics",
+      "left": 0,
+      "bottom": 125,
+      "right": 42,
+      "top": 93,
+      "offsetX": 21,
+      "offsetY": 16,
+      "direction": -90
     }
   ],
   "costumeGroups": [
@@ -283,13 +371,201 @@
         }
       ],
       "showInSceneEditor": true
+    },
+    {
+      "name": "extras",
+      "costumes": [
+        {
+          "name": "bullet",
+          "role": "Bullet",
+          "canRotate": false,
+          "zOrder": 20,
+          "initialEvent": "default",
+          "showInSceneEditor": false,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "bullet"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "alienBullet",
+          "role": "AlienBullet",
+          "canRotate": false,
+          "zOrder": 20,
+          "initialEvent": "default",
+          "showInSceneEditor": false,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "alienBullet1"
+              ]
+            },
+            {
+              "name": "other",
+              "poses": [
+                "alienBullet2"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shieldNW",
+          "role": "Shield",
+          "canRotate": false,
+          "zOrder": 30,
+          "initialEvent": "default",
+          "showInSceneEditor": false,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "shieldNW"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shieldNE",
+          "role": "Shield",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "shieldNE"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shield",
+          "role": "Shield",
+          "canRotate": false,
+          "zOrder": 30,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "shield"
+              ]
+            }
+          ]
+        }
+      ],
+      "showInSceneEditor": false
+    },
+    {
+      "name": "aliens",
+      "costumes": [
+        {
+          "name": "alien1",
+          "role": "Alien",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "alien1a"
+              ]
+            },
+            {
+              "name": "other",
+              "poses": [
+                "alien1b"
+              ]
+            },
+            {
+              "name": "bullet",
+              "costumes": [
+                "alienBullet"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "alien2",
+          "role": "Alien",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "inheritsEventsFrom": "alien1",
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "alien2a"
+              ]
+            },
+            {
+              "name": "other",
+              "poses": [
+                "alien2b"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "alien3",
+          "role": "Alien",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "inheritsEventsFrom": "alien1",
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "alien3b"
+              ]
+            },
+            {
+              "name": "other",
+              "poses": [
+                "alien3b"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mothership",
+          "role": "Mothership",
+          "canRotate": false,
+          "zOrder": 40,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "mothership"
+              ]
+            }
+          ]
+        }
+      ],
+      "showInSceneEditor": true
     }
   ],
   "costumes": [
     {
       "name": "ship",
       "role": "Ship",
-      "canRotate": false,
+      "canRotate": true,
       "zOrder": 50,
       "initialEvent": "default",
       "showInSceneEditor": true,
@@ -301,25 +577,101 @@
           ]
         },
         {
-          "name": "reloading",
+          "name": "fire",
           "poses": [
             "ship2"
+          ]
+        },
+        {
+          "name": "bullet",
+          "costumes": [
+            "bullet"
+          ]
+        },
+        {
+          "name": "reloaded",
+          "poses": [
+            "ship1"
           ]
         }
       ]
     },
     {
-      "name": "mothership",
-      "role": "Mothership",
-      "canRotate": false,
-      "zOrder": 40,
+      "name": "shieldFactory",
+      "role": "ShieldFactory",
+      "canRotate": true,
+      "zOrder": 20,
       "initialEvent": "default",
       "showInSceneEditor": true,
       "events": [
         {
           "name": "default",
           "poses": [
-            "mothership"
+            "shieldFactory"
+          ]
+        },
+        {
+          "name": "shieldNE",
+          "costumes": [
+            "shieldNE"
+          ]
+        },
+        {
+          "name": "shieldNW",
+          "costumes": [
+            "shieldNW"
+          ]
+        },
+        {
+          "name": "shield",
+          "costumes": [
+            "shield"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "alienFactory",
+      "role": "AlienFactory",
+      "canRotate": true,
+      "zOrder": 0,
+      "initialEvent": "default",
+      "showInSceneEditor": true,
+      "events": [
+        {
+          "name": "default",
+          "poses": [
+            "alienFactory"
+          ]
+        },
+        {
+          "name": "row0",
+          "costumes": [
+            "alien1"
+          ]
+        },
+        {
+          "name": "row1",
+          "costumes": [
+            "alien2"
+          ]
+        },
+        {
+          "name": "row2",
+          "costumes": [
+            "alien2"
+          ]
+        },
+        {
+          "name": "row3",
+          "costumes": [
+            "alien3"
+          ]
+        },
+        {
+          "name": "row4",
+          "costumes": [
+            "alien3"
           ]
         }
       ]

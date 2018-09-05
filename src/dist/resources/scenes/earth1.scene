@@ -1,0 +1,93 @@
+{
+  "director": "uk.co.nickthecoder.tickle.NoDirector",
+  "background": "#000000",
+  "showMouse": true,
+  "layout": "default",
+  "snapToGrid": {
+    "enabled": false,
+    "xSpacing": 50,
+    "ySpacing": 50,
+    "xOffset": 0,
+    "yOffset": 0,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapToGuides": {
+    "enabled": true,
+    "closeness": 5,
+    "x": [
+      
+    ],
+    "y": [
+      
+    ]
+  },
+  "snapToOthers": {
+    "enabled": true,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapRotation": {
+    "enabled": true,
+    "step": 15,
+    "closeness": 15
+  },
+  "include": [
+    
+  ],
+  "stages": [
+    {
+      "name": "main",
+      "actors": [
+        {
+          "costume": "earth1",
+          "x": 0,
+          "y": 0,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "ship",
+          "x": 319,
+          "y": 79,
+          "direction": 90,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "shieldFactory",
+          "x": 319,
+          "y": 138,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "shieldFactory",
+          "x": 122,
+          "y": 111,
+          "direction": 14.999999999999998,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "shieldFactory",
+          "x": 494,
+          "y": 112,
+          "direction": 345,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "alienFactory",
+          "x": 126,
+          "y": 395,
+          "direction": 270,
+          "scaleX": 1,
+          "scaleY": 1
+        }
+      ]
+    }
+  ]
+}
