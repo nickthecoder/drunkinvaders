@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "earth2"
+      "value": "about"
     }
   ],
   "background": "#000000",
@@ -101,19 +101,19 @@
         },
         {
           "costume": "alienFactory",
-          "x": 126,
-          "y": 395,
-          "direction": 268.80651057601796,
+          "x": 101,
+          "y": 417,
+          "direction": 264.9203921399854,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "across",
-              "value": "3"
+              "value": "6"
             },
             {
               "name": "down",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "countdown",
@@ -129,7 +129,7 @@
             },
             {
               "name": "alienSpeed",
-              "value": "3"
+              "value": "2"
             },
             {
               "name": "bulletSpeed",

@@ -6,17 +6,28 @@ import org.joml.*
 
 class Alien extends AbstractRole implements Enemy, Bounces {
 
-    def velocity = new Vector2d( 0, 0 )
-    def spin = 0
+    @Attribute
+    public int fireFrequency = 100
+
+    @Attribute
+    public Vector2d velocity = new Vector2d( 0, 0 )
+
+    @Attribute
+    public double spin = 0
+
+    @Attribute
+    public double bulletSpeed = 3
 
     def radius = 16
     def mass = 1
 
-    def fireRate = 100
-
     def rand = new RandomFactory()
 
-    def void tick() {
+    void activated() {
+        Game.instance.director.newAlien()
+    }
+
+    void tick() {
 
         actor.position.add( velocity )
         if ( spin > 5 ) spin = 5
@@ -36,7 +47,7 @@ class Alien extends AbstractRole implements Enemy, Bounces {
             velocity.y = - velocity.y
         }
 
-        if ( rand.oneIn( fireRate ) ) {
+        if ( rand.oneIn( fireFrequency ) ) {
             fire()
         }
 
@@ -56,17 +67,19 @@ class Alien extends AbstractRole implements Enemy, Bounces {
 
     }
 
-    def fire() {
+    void fire() {
         def bulletA = actor.createChild( "bullet" )
         bulletA.direction.radians = actor.direction.radians
         bulletA.moveForwards( 10 )
+        bulletA.role.speed = bulletSpeed
     }
 
-    def void hit() {
+    void hit() {
+        Game.instance.director.alienDied()
         actor.role = new Dying()
     }
 
-    def void bounce( double impact ) {
+    void bounce( double impact ) {
         spin += rand.plusMinus( impact )
     }
 

@@ -1,4 +1,4 @@
 interface Bounces {
-    def void bounce( double impact )
+    void bounce( double impact )
 }
 

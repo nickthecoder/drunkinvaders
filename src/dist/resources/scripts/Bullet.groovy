@@ -3,8 +3,10 @@ import uk.co.nickthecoder.tickle.resources.*
 
 class Bullet extends AbstractRole {
 
-    def void tick() {
-        actor.moveForwards( 6 )
+    public double speed = 6
+
+    void tick() {
+        actor.moveForwards( speed )
 
         def pixel = Game.instance.producer.pixel
 

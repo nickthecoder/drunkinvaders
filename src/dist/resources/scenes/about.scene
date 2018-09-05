@@ -1,0 +1,98 @@
+{
+  "director": "uk.co.nickthecoder.tickle.NoDirector",
+  "background": "#000000",
+  "showMouse": true,
+  "layout": "default",
+  "snapToGrid": {
+    "enabled": false,
+    "xSpacing": 50,
+    "ySpacing": 50,
+    "xOffset": 0,
+    "yOffset": 0,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapToGuides": {
+    "enabled": true,
+    "closeness": 5,
+    "x": [
+      
+    ],
+    "y": [
+      
+    ]
+  },
+  "snapToOthers": {
+    "enabled": true,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapRotation": {
+    "enabled": true,
+    "step": 15,
+    "closeness": 15
+  },
+  "include": [
+    
+  ],
+  "stages": [
+    {
+      "name": "main",
+      "actors": [
+        {
+          "costume": "earth1",
+          "x": 0,
+          "y": 0,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "title",
+          "x": 37,
+          "y": 351,
+          "text": "Drunk Invaders",
+          "textOutlineColor": "#00000000",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "sceneButton",
+          "x": 526,
+          "y": 8,
+          "text": "Back",
+          "textColor": "#4d804dff",
+          "textOutlineColor": "#00000000",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "menu"
+            }
+          ]
+        },
+        {
+          "costume": "plain",
+          "x": 327,
+          "y": 348,
+          "text": " Written by Nick Robinson",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        },
+        {
+          "costume": "plain",
+          "x": 17,
+          "y": 159,
+          "text": "This is the first game written using Tickle with the\nscripting language Groovy.\n\nI've tried to make the code easy(ish) to read, as it\nmay be useful for others while learning about Tickle.",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
+        }
+      ]
+    }
+  ]
+}

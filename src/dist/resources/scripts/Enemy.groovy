@@ -1,6 +1,6 @@
 interface Enemy{
 
-    def void hit()
+    void hit()
 
 }
 

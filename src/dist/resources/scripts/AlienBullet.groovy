@@ -1,13 +1,17 @@
 import uk.co.nickthecoder.tickle.*
 import uk.co.nickthecoder.tickle.resources.*
+import uk.co.nickthecoder.tickle.util.*
 import uk.co.nickthecoder.tickle.action.*
 import uk.co.nickthecoder.tickle.action.animation.*
 
 class AlienBullet extends AbstractRole implements Enemy {
 
+    @Attribute
+    public double speed = 3
+
     def animation
 
-    def void begin() {
+    void begin() {
         animation = 
             (new Delay( 0.1 )
             .then( new EventAction( actor, "other" ) )
@@ -15,11 +19,11 @@ class AlienBullet extends AbstractRole implements Enemy {
             .then( new EventAction( actor, "default" ) ) ).forever()
     }
 
-    def void tick() {
+    void tick() {
 
         animation.act()
 
-        actor.moveForwards( 3 )
+        actor.moveForwards( speed )
 
         def pixel = Game.instance.producer.pixel
 
@@ -36,7 +40,7 @@ class AlienBullet extends AbstractRole implements Enemy {
         }
     }
 
-    def void hit() {
+    void hit() {
         actor.die()
     }
 

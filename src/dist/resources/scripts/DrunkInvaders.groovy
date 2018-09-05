@@ -6,7 +6,7 @@ class DrunkInvaders extends AbstractProducer {
     // The overlapping strategy used within this game.
     def pixel
 
-    def void begin() {
+    void begin() {
         pixel = new PixelOverlapping().threshold( 60 )
     }
 }

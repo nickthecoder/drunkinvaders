@@ -1,5 +1,11 @@
 {
-  "director": "uk.co.nickthecoder.tickle.NoDirector",
+  "director": "Level",
+  "directorAttributes": [
+    {
+      "name": "nextScene",
+      "value": "menu"
+    }
+  ],
   "background": "#000000",
   "showMouse": true,
   "layout": "default",
@@ -58,13 +64,14 @@
           "textHAlignment": "CENTER",
           "textVAlignment": "CENTER",
           "textColor": "#b3ccffff",
+          "textOutlineColor": "#00000000",
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "scene",
-              "value": "play"
+              "value": "earth1"
             }
           ]
         },
@@ -113,7 +120,21 @@
           "zOrder": 0,
           "direction": 90,
           "scaleX": 1,
-          "scaleY": 1
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "center",
+              "value": "320.0x-1000.0"
+            },
+            {
+              "name": "speedDegrees",
+              "value": "0.2"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "6"
+            }
+          ]
         },
         {
           "costume": "mothership",

@@ -3,7 +3,7 @@ import uk.co.nickthecoder.tickle.resources.*
 
 class ShieldFactory extends AbstractRole {
 
-    def void begin() {
+    void begin() {
         def across = 8
         def down = 4
         for ( def x = 0; x < across; x ++ ) {
@@ -22,7 +22,7 @@ class ShieldFactory extends AbstractRole {
         actor.die()
     }
 
-    def void tick() {
+    void tick() {
     }
 }
 

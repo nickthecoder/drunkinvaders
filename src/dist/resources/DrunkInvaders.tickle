@@ -72,6 +72,13 @@
       "size": 80,
       "xPadding": 1,
       "yPadding": 1
+    },
+    {
+      "name": "plain",
+      "file": "fonts/Vera/Vera.ttf",
+      "size": 22,
+      "xPadding": 1,
+      "yPadding": 1
     }
   ],
   "poses": [
@@ -411,6 +418,12 @@
                 "alienBullet2"
               ]
             }
+          ],
+          "attributes": [
+            {
+              "name": "speed",
+              "value": "3"
+            }
           ]
         },
         {
@@ -493,6 +506,24 @@
                 "alienBullet"
               ]
             }
+          ],
+          "attributes": [
+            {
+              "name": "fireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "velocity",
+              "value": "0.0x0.0"
+            },
+            {
+              "name": "spin",
+              "value": "0"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
+            }
           ]
         },
         {
@@ -516,6 +547,24 @@
                 "alien2b"
               ]
             }
+          ],
+          "attributes": [
+            {
+              "name": "fireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "velocity",
+              "value": "0.0x0.0"
+            },
+            {
+              "name": "spin",
+              "value": "0"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
+            }
           ]
         },
         {
@@ -538,6 +587,24 @@
               "poses": [
                 "alien3b"
               ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "fireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "velocity",
+              "value": "0.0x0.0"
+            },
+            {
+              "name": "spin",
+              "value": "0"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
             }
           ]
         },
@@ -593,6 +660,20 @@
           "poses": [
             "ship1"
           ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "center",
+          "value": "320.0x-1000.0"
+        },
+        {
+          "name": "speedDegrees",
+          "value": "0.2"
+        },
+        {
+          "name": "bulletSpeed",
+          "value": "6"
         }
       ]
     },
@@ -672,6 +753,57 @@
           "name": "row4",
           "costumes": [
             "alien3"
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "across",
+          "value": "3"
+        },
+        {
+          "name": "down",
+          "value": "2"
+        },
+        {
+          "name": "countdown",
+          "value": "20"
+        },
+        {
+          "name": "delay",
+          "value": "5"
+        },
+        {
+          "name": "alienSpeed",
+          "value": "3"
+        },
+        {
+          "name": "fireFrequency",
+          "value": "100"
+        },
+        {
+          "name": "bulletSpeed",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "name": "plain",
+      "role": "",
+      "canRotate": false,
+      "zOrder": 0,
+      "initialEvent": "default",
+      "showInSceneEditor": true,
+      "events": [
+        {
+          "name": "default",
+          "textStyles": [
+            {
+              "font": "plain",
+              "halign": "LEFT",
+              "valign": "BOTTOM",
+              "color": "#ffffffff"
+            }
           ]
         }
       ]

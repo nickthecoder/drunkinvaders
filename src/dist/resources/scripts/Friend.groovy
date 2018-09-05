@@ -1,6 +1,6 @@
 interface Friend {
 
-    def void hit()
+    void hit()
 
 }
 
