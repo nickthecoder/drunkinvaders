@@ -1,5 +1,5 @@
 {
-  "director": "Level",
+  "director": "Menu",
   "directorAttributes": [
     {
       "name": "nextScene",
@@ -133,6 +133,14 @@
             {
               "name": "bulletSpeed",
               "value": "6"
+            },
+            {
+              "name": "shieldTicks",
+              "value": "1000"
+            },
+            {
+              "name": "canMoveShielded",
+              "value": "false"
             }
           ]
         },

@@ -72,10 +72,17 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
     }
 
     void bounceWith( Bounces other ) {
-        def impact = CollisionKt.circularCollision(
-            actor.position, velocity, mass,
-            other.actor.position, other.velocity, other.mass )
-
+        def impact
+        if ( other instanceof AlienShip ) {
+            impact = CollisionKt.circularCollision(
+                actor.position, velocity, mass,
+                other.actor.position, other.velocity, other.mass )
+        } else {
+            impact = CollisionKt.circularCollision(
+                actor.position, velocity, mass,
+                other.actor.position, new Vector2d(0,0), 100 )
+        }
+        
         spin += rand.plusMinus( impact )
         other.bounce(impact)
     }
@@ -89,7 +96,7 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
 
     void hit() {
         Game.instance.director.alienDied()
-        actor.role = new Dying()
+        actor.role = new DyingWithShrapnel()
     }
 
     void bounce( double impact ) {

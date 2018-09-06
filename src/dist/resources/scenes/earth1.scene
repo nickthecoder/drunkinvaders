@@ -72,6 +72,14 @@
             {
               "name": "bulletSpeed",
               "value": "6"
+            },
+            {
+              "name": "shieldTicks",
+              "value": "1000"
+            },
+            {
+              "name": "canMoveShielded",
+              "value": "false"
             }
           ]
         },
@@ -134,6 +142,24 @@
             {
               "name": "bulletSpeed",
               "value": "3"
+            }
+          ]
+        },
+        {
+          "costume": "lifeFactory",
+          "x": 600,
+          "y": 450,
+          "direction": 90,
+          "scaleX": 0.75,
+          "scaleY": 0.75,
+          "attributes": [
+            {
+              "name": "spacingX",
+              "value": "-60"
+            },
+            {
+              "name": "spacingY",
+              "value": "0"
             }
           ]
         }

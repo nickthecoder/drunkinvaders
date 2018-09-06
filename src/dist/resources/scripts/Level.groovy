@@ -13,6 +13,10 @@ class Level extends AbstractDirector {
     def ended = false
     def endCountdown = 100
 
+    void activated() {
+        
+    }
+
     void tick() {
         if (ended) {
             endCountdown --
