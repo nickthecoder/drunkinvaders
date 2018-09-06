@@ -748,6 +748,10 @@
             {
               "name": "bulletSpeed",
               "value": "3"
+            },
+            {
+              "name": "points",
+              "value": "70"
             }
           ]
         },
@@ -789,6 +793,10 @@
             {
               "name": "bulletSpeed",
               "value": "3"
+            },
+            {
+              "name": "points",
+              "value": "20"
             }
           ]
         },
@@ -1111,6 +1119,27 @@
             {
               "name": "spacingY",
               "value": "0"
+            }
+          ]
+        },
+        {
+          "name": "score",
+          "role": "Score",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "textStyles": [
+                {
+                  "font": "boycott",
+                  "halign": "CENTER",
+                  "valign": "CENTER",
+                  "color": "#ffffffff"
+                }
+              ]
             }
           ]
         }

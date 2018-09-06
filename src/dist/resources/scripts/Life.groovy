@@ -32,17 +32,26 @@ class Life extends AbstractRole {
 
         def seconds = 2
 
+        // Flash on and off (this will be repeated, see below)
         def flash =
             new EventAction(actor, "flashOn")
             .then( new Delay(0.1) )
             .then( new EventAction(actor, "flashOff") )
             .then( new Delay(0.1) )
 
+        // The amount the ship turns whilest moving into position.
+        // It is nicer looking if it always does and extra spin (360).
+        def turn = Angle.degrees(360) + ship.actor.direction - actor.direction
+        if ( turn.degrees < 180 ) turn += Angle.degrees( 360 )
+
+        // Return to normal size, move to the correct place, and spin a little bit.
         def movement =
             new Scale( actor, 1, new Vector2d(1,1), Eases.easeInQuad )
             .and( new MoveTo( actor.position, seconds, ship.actor.position, Eases.easeInOut) )
-            .and( Turn.turnTo( actor.direction, seconds, ship.actor.direction, Eases.easeInQuad) )
+            .and( new Turn( actor.direction, seconds, turn, Eases.easeOut) )
 
+        // Do "flash" 5 times, and then do "movement"
+        // The
         animation = 
             flash.repeat( 5 )
             .then( new EventAction( actor, "shield0") )

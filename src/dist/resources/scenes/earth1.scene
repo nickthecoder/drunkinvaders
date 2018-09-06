@@ -162,6 +162,15 @@
               "value": "0"
             }
           ]
+        },
+        {
+          "costume": "score",
+          "x": 320,
+          "y": 450,
+          "text": "score",
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5
         }
       ]
     }

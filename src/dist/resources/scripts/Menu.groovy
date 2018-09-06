@@ -8,6 +8,7 @@ import uk.co.nickthecoder.tickle.resources.*
 class Menu extends Level {
 
     void activated() {
+        Game.instance.producer.score = 0
         Game.instance.producer.lives = 4
     }
 

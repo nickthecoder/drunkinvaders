@@ -18,6 +18,9 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
     @Attribute
     public double bulletSpeed = 3
 
+    @CostumeAttribute
+    public int points = 10
+
     def radius = 16
     def mass = 1
 
@@ -96,6 +99,7 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
 
     void hit() {
         Game.instance.director.alienDied()
+        Game.instance.producer.score += points
         actor.role = new DyingWithShrapnel()
     }
 
