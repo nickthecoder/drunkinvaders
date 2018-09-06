@@ -4,7 +4,7 @@
     "id": "ticklegame",
     "width": 640,
     "height": 480,
-    "resizable": true,
+    "resizable": false,
     "fullScreen": false,
     "initialScene": "menu",
     "testScene": "earth1",
@@ -279,6 +279,94 @@
       "offsetX": 21,
       "offsetY": 16,
       "direction": -90
+    },
+    {
+      "name": "shield0",
+      "texture": "graphics",
+      "left": 147,
+      "bottom": 103,
+      "right": 213,
+      "top": 69,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield1",
+      "texture": "graphics",
+      "left": 148,
+      "bottom": 140,
+      "right": 214,
+      "top": 106,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield2",
+      "texture": "graphics",
+      "left": 147,
+      "bottom": 176,
+      "right": 213,
+      "top": 142,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield3",
+      "texture": "graphics",
+      "left": 146,
+      "bottom": 211,
+      "right": 212,
+      "top": 177,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield4",
+      "texture": "graphics",
+      "left": 217,
+      "bottom": 211,
+      "right": 283,
+      "top": 177,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield5",
+      "texture": "graphics",
+      "left": 217,
+      "bottom": 175,
+      "right": 283,
+      "top": 141,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield6",
+      "texture": "graphics",
+      "left": 216,
+      "bottom": 139,
+      "right": 282,
+      "top": 105,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
+    },
+    {
+      "name": "shield7",
+      "texture": "graphics",
+      "left": 217,
+      "bottom": 102,
+      "right": 283,
+      "top": 68,
+      "offsetX": 34,
+      "offsetY": 12,
+      "direction": 90
     }
   ],
   "costumeGroups": [
@@ -482,7 +570,7 @@
       "costumes": [
         {
           "name": "alien1",
-          "role": "Alien",
+          "role": "AlienShip",
           "canRotate": false,
           "zOrder": 0,
           "initialEvent": "default",
@@ -528,7 +616,7 @@
         },
         {
           "name": "alien2",
-          "role": "Alien",
+          "role": "AlienShip",
           "canRotate": false,
           "zOrder": 0,
           "initialEvent": "default",
@@ -569,7 +657,7 @@
         },
         {
           "name": "alien3",
-          "role": "Alien",
+          "role": "AlienShip",
           "canRotate": false,
           "zOrder": 0,
           "initialEvent": "default",
@@ -644,7 +732,7 @@
           ]
         },
         {
-          "name": "fire",
+          "name": "reloading",
           "poses": [
             "ship2"
           ]
@@ -660,6 +748,54 @@
           "poses": [
             "ship1"
           ]
+        },
+        {
+          "name": "shield7",
+          "poses": [
+            "shield7"
+          ]
+        },
+        {
+          "name": "shield6",
+          "poses": [
+            "shield6"
+          ]
+        },
+        {
+          "name": "shield5",
+          "poses": [
+            "shield5"
+          ]
+        },
+        {
+          "name": "shield4",
+          "poses": [
+            "shield4"
+          ]
+        },
+        {
+          "name": "shield3",
+          "poses": [
+            "shield3"
+          ]
+        },
+        {
+          "name": "shield2",
+          "poses": [
+            "shield2"
+          ]
+        },
+        {
+          "name": "shield1",
+          "poses": [
+            "shield1"
+          ]
+        },
+        {
+          "name": "shield0",
+          "poses": [
+            "shield0"
+          ]
         }
       ],
       "attributes": [
@@ -674,6 +810,10 @@
         {
           "name": "bulletSpeed",
           "value": "6"
+        },
+        {
+          "name": "shieldTicks",
+          "value": "100"
         }
       ]
     },

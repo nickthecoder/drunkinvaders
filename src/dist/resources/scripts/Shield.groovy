@@ -2,7 +2,7 @@ import uk.co.nickthecoder.tickle.*
 import uk.co.nickthecoder.tickle.resources.*
 import org.joml.*
 
-class Shield extends AbstractRole implements Enemy, Friend, Bounces {
+class Shield extends AbstractRole implements Alien, Human, Bounces {
 
     def velocity = new Vector2d( 0, 0 )
     def mass = 100

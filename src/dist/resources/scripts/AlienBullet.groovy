@@ -4,7 +4,7 @@ import uk.co.nickthecoder.tickle.util.*
 import uk.co.nickthecoder.tickle.action.*
 import uk.co.nickthecoder.tickle.action.animation.*
 
-class AlienBullet extends AbstractRole implements Enemy {
+class AlienBullet extends AbstractRole implements Alien {
 
     @Attribute
     public double speed = 3
@@ -27,10 +27,14 @@ class AlienBullet extends AbstractRole implements Enemy {
 
         def pixel = Game.instance.producer.pixel
 
-        for( def other : actor.stage.findRolesByClass( Friend.class ) ) {
+        for( def other : actor.stage.findRolesByClass( Human.class ) ) {
             if (pixel.overlapping( actor, other.actor ) ) {
-                other.hit()
-                actor.die()
+                if ( other instanceof Ship && other.shielded ) {
+                    actor.role = new Dying()
+                } else {
+                    other.hit()
+                    actor.die()
+                }
                 break
             }
         }

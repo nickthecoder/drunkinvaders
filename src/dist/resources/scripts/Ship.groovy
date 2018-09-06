@@ -3,7 +3,7 @@ import uk.co.nickthecoder.tickle.resources.*
 import uk.co.nickthecoder.tickle.util.*
 import org.joml.*
 
-class Ship extends AbstractRole implements Friend {
+class Ship extends AbstractRole implements Human, Bounces {
 
     @Attribute
     public Vector2d center = new Vector2d( 320, -1000 )
@@ -14,20 +14,64 @@ class Ship extends AbstractRole implements Friend {
     @Attribute
     public double bulletSpeed = 6
 
-    def left = Resources.instance.inputs.find("left")
-    def right = Resources.instance.inputs.find("right")
-    def fire = Resources.instance.inputs.find("fire")
+    @Attribute
+    public int shieldTicks = 100
 
     def radius = 0
+    def mass = 100
+
+    int shieldUsed = 0
+    boolean shielded = false
+
+    // Keyboard inputs (set in activated)
+    def left 
+    def right
+    def fire 
+    def shield
 
     def bulletA = null
 
     void activated() {
+        left = Resources.instance.inputs.find("left")
+        right = Resources.instance.inputs.find("right")
+        fire = Resources.instance.inputs.find("fire")
+        shield = Resources.instance.inputs.find("shield")
+
         radius = actor.position.distance( center )
         actor.direction.radians = Angle.radiansOf( actor.position, center )
     }
 
+    void choosePose() {
+        if (shielded) {
+            int frame = (8 * shieldUsed)/shieldTicks
+            actor.event( "shield" + frame )
+        } else {
+            if ( bulletA == null ) {
+                actor.event( "reloaded" )
+            } else {
+                actor.event( "reloading" )
+            }   
+        }
+    }
+
     void tick() {
+
+        if (shield.isPressed() && shieldUsed < shieldTicks) {
+
+            shieldUsed ++
+            if ( shieldUsed >= shieldTicks ) {
+                shielded = false
+            } else {
+                shielded = true
+            }
+            choosePose()
+
+        } else {
+            if (shielded) {
+                shielded = false
+                choosePose()
+            }
+        }
 
         if (left.isPressed()) {
             actor.direction.degrees += speedDegrees
@@ -42,8 +86,8 @@ class Ship extends AbstractRole implements Friend {
 
         if ( bulletA != null ) {
             if ( bulletA.stage == null ) {
-                actor.event( "reloaded" )
                 bulletA = null
+                choosePose()
             }
         } else {
             if (fire.isPressed() ) {
@@ -53,14 +97,7 @@ class Ship extends AbstractRole implements Friend {
                 bulletA.moveForwards( 16 )
                 bulletA.role.speed = bulletSpeed
                 bulletA.scaleXY = 12 / bulletSpeed
-            }
-        }
-
-        def pixel = Game.instance.producer.pixel
-
-        for( def other : actor.stage.findRolesByClass( Enemy.class ) ) {
-            if ( pixel.overlapping( actor, other.actor ) ) {
-                hit()
+                choosePose()
             }
         }
 
@@ -69,5 +106,11 @@ class Ship extends AbstractRole implements Friend {
     void hit() {
         actor.role = new Dying()
     }
+
+    // An alien ship has hit us while our shield is on. It will bounce away,
+    // We don't need to do anything, but could make a sound, or talk, reduce our shield etc.
+    void bounce( double impact ) {
+    }
+
 }
 

@@ -1,6 +1,0 @@
-interface Friend {
-
-    void hit()
-
-}
-

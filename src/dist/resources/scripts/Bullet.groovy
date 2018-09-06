@@ -10,7 +10,7 @@ class Bullet extends AbstractRole {
 
         def pixel = Game.instance.producer.pixel
 
-        for( def enemy : actor.stage.findRolesByClass( Enemy.class ) ) {
+        for( def enemy : actor.stage.findRolesByClass( Alien.class ) ) {
             if (pixel.overlapping( actor, enemy.actor ) ) {
                 enemy.hit()
                 actor.die()

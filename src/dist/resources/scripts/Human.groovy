@@ -1,4 +1,4 @@
-interface Enemy{
+interface Human {
 
     void hit()
 
