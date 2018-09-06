@@ -141,17 +141,47 @@
             {
               "name": "canMoveShielded",
               "value": "false"
+            },
+            {
+              "name": "message",
+              "value": "Welcome to Drunk Invaders"
             }
           ]
         },
         {
           "costume": "mothership",
-          "x": 687,
+          "x": 686,
           "y": 460,
           "zOrder": 0,
-          "direction": 0,
+          "direction": 270,
           "scaleX": 1,
-          "scaleY": 1
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "birthPeriod",
+              "value": "60"
+            },
+            {
+              "name": "fireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "velocity",
+              "value": "-3.0x0.0"
+            },
+            {
+              "name": "spin",
+              "value": "0"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
+            },
+            {
+              "name": "maxChildren",
+              "value": "10"
+            }
+          ]
         },
         {
           "costume": "shieldFactory",

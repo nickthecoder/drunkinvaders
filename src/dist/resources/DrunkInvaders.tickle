@@ -79,6 +79,13 @@
       "size": 22,
       "xPadding": 1,
       "yPadding": 1
+    },
+    {
+      "name": "talk",
+      "file": "fonts/Vera/Vera.ttf",
+      "size": 16,
+      "xPadding": 1,
+      "yPadding": 1
     }
   ],
   "poses": [
@@ -179,17 +186,6 @@
       "top": 0,
       "offsetX": 0,
       "offsetY": 0,
-      "direction": 0
-    },
-    {
-      "name": "mothership",
-      "texture": "graphics",
-      "left": 147,
-      "bottom": 35,
-      "right": 218,
-      "top": 0,
-      "offsetX": 37,
-      "offsetY": 16,
       "direction": 0
     },
     {
@@ -400,6 +396,51 @@
       "offsetX": 5,
       "offsetY": 5,
       "direction": 0
+    },
+    {
+      "name": "mothership2",
+      "texture": "graphics",
+      "left": 145,
+      "bottom": 69,
+      "right": 216,
+      "top": 34,
+      "offsetX": 37,
+      "offsetY": 16,
+      "direction": -90
+    },
+    {
+      "name": "mothership3",
+      "texture": "graphics",
+      "left": 147,
+      "bottom": 248,
+      "right": 218,
+      "top": 213,
+      "offsetX": 37,
+      "offsetY": 16,
+      "direction": -90
+    },
+    {
+      "name": "mothership1",
+      "texture": "graphics",
+      "left": 147,
+      "bottom": 35,
+      "right": 218,
+      "top": 0,
+      "offsetX": 37,
+      "offsetY": 16,
+      "direction": -90
+    },
+    {
+      "name": "whiteBubble",
+      "texture": "graphics",
+      "left": 1,
+      "bottom": 174,
+      "right": 105,
+      "top": 126,
+      "offsetX": 52,
+      "offsetY": 2,
+      "direction": 0,
+      "tiled": true
     }
   ],
   "costumeGroups": [
@@ -692,6 +733,49 @@
               ]
             }
           ]
+        },
+        {
+          "name": "talk",
+          "role": "",
+          "canRotate": false,
+          "zOrder": 99,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "textStyles": [
+                {
+                  "font": "talk",
+                  "halign": "CENTER",
+                  "valign": "BOTTOM",
+                  "color": "#000000ff"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "whiteBubble",
+          "role": "",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "ninePatches": [
+                {
+                  "pose": "whiteBubble",
+                  "left": 6,
+                  "bottom": 20,
+                  "right": 25,
+                  "top": 20
+                }
+              ]
+            }
+          ]
         }
       ],
       "showInSceneEditor": false
@@ -714,7 +798,7 @@
               ]
             },
             {
-              "name": "other",
+              "name": "frame1",
               "poses": [
                 "alien1b"
               ]
@@ -771,7 +855,7 @@
               ]
             },
             {
-              "name": "other",
+              "name": "frame1",
               "poses": [
                 "alien2b"
               ]
@@ -816,7 +900,7 @@
               ]
             },
             {
-              "name": "other",
+              "name": "frame1",
               "poses": [
                 "alien3b"
               ]
@@ -844,15 +928,16 @@
         {
           "name": "mothership",
           "role": "Mothership",
-          "canRotate": false,
+          "canRotate": true,
           "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": true,
+          "inheritsEventsFrom": "alien1",
           "events": [
             {
               "name": "default",
               "poses": [
-                "mothership"
+                "mothership1"
               ]
             },
             {
@@ -860,6 +945,52 @@
               "costumes": [
                 "redShrapnel"
               ]
+            },
+            {
+              "name": "child",
+              "costumes": [
+                "alien1",
+                "alien2",
+                "alien3"
+              ]
+            },
+            {
+              "name": "frame1",
+              "poses": [
+                "mothership3"
+              ]
+            },
+            {
+              "name": "frame2",
+              "poses": [
+                "mothership2"
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "birthPeriod",
+              "value": "60"
+            },
+            {
+              "name": "maxChildren",
+              "value": "10"
+            },
+            {
+              "name": "fireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "velocity",
+              "value": "0.0x0.0"
+            },
+            {
+              "name": "spin",
+              "value": "0"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
             }
           ]
         }
@@ -1064,6 +1195,18 @@
               "costumes": [
                 "greenShrapnel"
               ]
+            },
+            {
+              "name": "talk",
+              "costumes": [
+                "talk"
+              ]
+            },
+            {
+              "name": "bubble",
+              "costumes": [
+                "whiteBubble"
+              ]
             }
           ],
           "attributes": [
@@ -1086,6 +1229,10 @@
             {
               "name": "canMoveShielded",
               "value": "false"
+            },
+            {
+              "name": "message",
+              "value": ""
             }
           ]
         },

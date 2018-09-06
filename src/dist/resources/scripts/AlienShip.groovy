@@ -2,6 +2,8 @@ import uk.co.nickthecoder.tickle.*
 import uk.co.nickthecoder.tickle.resources.*
 import uk.co.nickthecoder.tickle.util.*
 import uk.co.nickthecoder.tickle.collision.*
+import uk.co.nickthecoder.tickle.action.*
+import uk.co.nickthecoder.tickle.action.animation.*
 import org.joml.*
 
 class AlienShip extends AbstractRole implements Alien, Bounces {
@@ -24,13 +26,35 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
     def radius = 16
     def mass = 1
 
+    def scaleAction = null
+
     def rand = new RandomFactory()
+
+    // An Action, which cycles through the frames (i.e. chaing pose)
+    Action animation = null
 
     void activated() {
         Game.instance.director.newAlien()
+        animation = createAnimation().forever()
+        animation.begin()
+    }
+
+    Action createAnimation() {
+        return new Delay( 0.2 )
+            .then( new EventAction( actor, "frame1" ) )
+            .then( new Delay( 0.2 ) )
+            .then( new EventAction( actor, "default" ) )
     }
 
     void tick() {
+
+        animation.act()
+
+        if ( scaleAction != null ) {
+            if (scaleAction.act()) {
+                scaleAction = null
+            }
+        }
 
         actor.position.add( velocity )
         if ( spin > 5 ) spin = 5
@@ -98,9 +122,13 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
     }
 
     void hit() {
-        Game.instance.director.alienDied()
-        Game.instance.producer.score += points
-        actor.role = new DyingWithShrapnel()
+        if ( actor.scaleXY > 1 ) {
+            scaleAction = new Scale( actor, 1, actor.scaleXY * 0.9, Eases.easeInOut )
+        } else {
+            Game.instance.director.alienDied()
+            Game.instance.producer.score += points
+            actor.role = new DyingWithShrapnel()
+        }
     }
 
     void bounce( double impact ) {

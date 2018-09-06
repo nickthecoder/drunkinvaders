@@ -80,6 +80,10 @@
             {
               "name": "canMoveShielded",
               "value": "false"
+            },
+            {
+              "name": "message",
+              "value": "Hello World.\nThis is long!"
             }
           ]
         },
@@ -171,6 +175,40 @@
           "direction": 0,
           "scaleX": 0.5,
           "scaleY": 0.5
+        },
+        {
+          "costume": "mothership",
+          "x": -41,
+          "y": 456,
+          "direction": 270,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "birthPeriod",
+              "value": "300"
+            },
+            {
+              "name": "fireFrequency",
+              "value": "1000"
+            },
+            {
+              "name": "velocity",
+              "value": "2.0x0.0"
+            },
+            {
+              "name": "spin",
+              "value": "0"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
+            },
+            {
+              "name": "maxChildren",
+              "value": "10"
+            }
+          ]
         }
       ]
     }

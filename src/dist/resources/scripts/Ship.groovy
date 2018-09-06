@@ -25,6 +25,8 @@ class Ship extends AbstractRole implements Human, Bounces {
     @Attribute
     public boolean canMoveShielded = false
 
+    @Attribute( rows=4 )
+    public String message = ""
 
     int orbit = 0 // Distance from the center of the planet/moon. Set in activated()
     int radius = 26 // The size of the ship (use when checking if the ship tries to move off-screen).
@@ -56,6 +58,10 @@ class Ship extends AbstractRole implements Human, Bounces {
 
         orbit = actor.position.distance( center )
         actor.direction.radians = Angle.radiansOf( actor.position, center )
+
+        if (message!= "") {
+            Talk.talk( actor, message, 3 )            
+        }
     }
 
     // Called 60 times per second. Check the keyboard inputs, and act appropriately.
