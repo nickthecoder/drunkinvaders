@@ -13,7 +13,7 @@ class DrunkInvaders extends AbstractProducer {
     def pixel
 
     void begin() {
-        pixel = new PixelOverlapping().threshold( 60 )
+        pixel = new PixelOverlapping(200, 128 )
     }
 }
 

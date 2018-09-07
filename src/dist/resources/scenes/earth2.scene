@@ -80,6 +80,10 @@
             {
               "name": "canMoveShielded",
               "value": "false"
+            },
+            {
+              "name": "message",
+              "value": ""
             }
           ]
         },
