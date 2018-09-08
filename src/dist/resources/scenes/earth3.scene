@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "earth2"
+      "value": "about"
     }
   ],
   "background": "#000000",
@@ -56,7 +56,7 @@
         {
           "costume": "ship",
           "x": 324,
-          "y": 69,
+          "y": 93,
           "direction": 90,
           "scaleX": 1,
           "scaleY": 1,
@@ -83,7 +83,7 @@
             },
             {
               "name": "message",
-              "value": "Hello World.\nThis is long!"
+              "value": ""
             }
           ]
         },
@@ -113,23 +113,23 @@
         },
         {
           "costume": "alienFactory",
-          "x": 126,
-          "y": 395,
-          "direction": 268.80651057601796,
+          "x": 101,
+          "y": 417,
+          "direction": 264.9203921399854,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "across",
-              "value": "3"
+              "value": "8"
             },
             {
               "name": "down",
-              "value": "2"
+              "value": "3"
             },
             {
               "name": "countdown",
-              "value": "20"
+              "value": "80"
             },
             {
               "name": "delay",
@@ -141,11 +141,11 @@
             },
             {
               "name": "alienSpeed",
-              "value": "1.5"
+              "value": "2"
             },
             {
               "name": "bulletSpeed",
-              "value": "3"
+              "value": "4"
             },
             {
               "name": "spacingX",
@@ -185,44 +185,36 @@
           "scaleY": 0.5
         },
         {
-          "costume": "mothershipFactory",
-          "x": -45,
-          "y": 452,
-          "direction": 270,
+          "costume": "ship",
+          "x": 195,
+          "y": 87,
+          "direction": 90,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
-              "name": "delay",
-              "value": "0"
+              "name": "center",
+              "value": "320.0x-1000.0"
             },
             {
-              "name": "ships",
-              "value": "3"
+              "name": "speedDegrees",
+              "value": "0.2"
             },
             {
-              "name": "interval",
-              "value": "3"
+              "name": "bulletSpeed",
+              "value": "6"
             },
             {
-              "name": "mothershipBirthPeriod",
-              "value": "300"
+              "name": "shieldTicks",
+              "value": "1000"
             },
             {
-              "name": "mothershipMaxChildren",
-              "value": "10"
+              "name": "canMoveShielded",
+              "value": "false"
             },
             {
-              "name": "mothershipFireFrequency",
-              "value": "100"
-            },
-            {
-              "name": "mothershipVelocity",
-              "value": "1.0x0.0"
-            },
-            {
-              "name": "mothershipBulletSpeed",
-              "value": "3"
+              "name": "message",
+              "value": "Hey buddy, need some help?"
             }
           ]
         }

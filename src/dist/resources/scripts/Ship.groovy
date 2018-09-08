@@ -162,13 +162,18 @@ class Ship extends AbstractRole implements Human, Bounces {
     void hit() {
         actor.role = new DyingWithShrapnel(100)
 
-        def life = actor.stage.findRolesByClass( Life.class ).max { it.index }
-        if ( life == null ) {
-            // Game over!
-        } else {
-            life.rebirth( this )
-            Game.instance.producer.lives --
+        // If there were more than one ship, then, just let this one die, and carry on with
+        // the other one!
+        if ( actor.stage.findRolesByClass( Ship.class ).size == 0 ) {
+            def life = actor.stage.findRolesByClass( Life.class ).max { it.index }
+            if ( life == null ) {
+                // Game over!
+            } else {
+                life.rebirth( this )
+                Game.instance.producer.lives --
+            }
         }
+
 
     }
 

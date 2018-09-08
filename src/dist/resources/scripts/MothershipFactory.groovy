@@ -47,8 +47,10 @@ class MothershipFactory extends ActionRole {
         mothership.birthPeriod = mothershipBirthPeriod
         mothership.maxChildren = mothershipMaxChildren
         mothership.fireFrequency = mothershipFireFrequency
-        mothership.velocity = mothershipVelocity
         mothership.bulletSpeed = mothershipBulletSpeed
+        // NOTE, we cannot use "=", because then all of the motherships would SHARE the
+        // same velocity, they wouldn't move independantly.
+        mothership.velocity.set( mothershipVelocity )
     }
 }
 

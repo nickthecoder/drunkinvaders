@@ -19,9 +19,11 @@ class Life extends AbstractRole {
     void tick() {
         if (animation != null) {
             if (animation.act()) {
-                actor.role = new Ship()
-                actor.role.bulletSpeed = bulletSpeed
-                actor.role.shieldTicks = shieldTicks
+                Ship ship = new Ship()
+                actor.role = ship
+                ship.bulletSpeed = bulletSpeed
+                ship.shieldTicks = shieldTicks
+                ship.shielded = true
             }
         }
     }

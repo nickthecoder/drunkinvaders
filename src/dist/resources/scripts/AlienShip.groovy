@@ -6,6 +6,18 @@ import uk.co.nickthecoder.tickle.action.*
 import uk.co.nickthecoder.tickle.action.animation.*
 import org.joml.*
 
+// AlienShips can be placed in a Scene individually, or created on-mass by AlienFactory.
+// They can also be created from a Mothership.
+//
+// There are three different Costumes, which use this Role. In addition, Mothership
+// extends AlienShip. It behaves the same, but also gives birth to more AlienShips.
+//
+// The move and spin, and bounce off the edges of the screen, other AlienShips and Shields.
+// They also bounce off of Ship when it is shielded.
+// The direction of movement is unrelated to the angle of their image (they are drunk!).
+//
+// AlienBullets are fired at random intervals.
+
 class AlienShip extends AbstractRole implements Alien, Bounces {
 
     @Attribute
@@ -20,18 +32,32 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
     @Attribute
     public double bulletSpeed = 3
 
+    // Points awarded when this AlienShip is shot.
+    // By used "@CostumeAttribute", the 3 different alien types can be assigned a
+    // different number of points in the Editor's Costume.
     @CostumeAttribute
     public int points = 10
 
-    def radius = 16
-    def mass = 1
+    // Used as a rough indication of size, when bouncing off the edges of the screen.
+    // It is NOT used when colliding with other Actors.
+    @CostumeAttribute
+    public int radius = 16
 
-    def scaleAction = null
+    // Used when colliding with other AlienShips.
+    @CostumeAttribute
+    public double mass = 1
 
-    def rand = new RandomFactory()
 
-    // An Action, which cycles through the frames (i.e. chaing pose)
+    // private attributes
+
+
+    // Changes the image size.
+    // Only used when an AlienShip is created from a MotherShip.
+    Action scaleAction = null
+
+    // An Action, which cycles through the frames (i.e. changing pose)
     Action animation = null
+
 
     void activated() {
         Game.instance.director.newAlien()
@@ -74,44 +100,61 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
             velocity.y = - velocity.y
         }
 
-        if ( rand.oneIn( fireFrequency ) ) {
+        if ( Rand.oneIn( fireFrequency ) ) {
             fire()
         }
 
+        // Get the collision algorithm, shared throughout the game.
         def pixel = Game.instance.producer.pixel
 
+        // Look for other AlienShips, Shields and Ships (all implement Bounces)
         for( def other : actor.stage.findRolesByClass( Bounces.class ) ) {
             if ( other != this && pixel.overlapping( actor, other.actor ) ) {
-                bounceWith( other )
-            }
-        }
 
-        for( def other : actor.stage.findRolesByClass( Ship.class ) ) {
-            if ( other != this && pixel.overlapping( actor, other.actor ) ) {
-                if (other.shielded) {
-                    bounceWith( other )
-                } else {
+                // Unshielded ships must be handled differently.
+                if (other instanceof Ship && !other.shielded) {
                     other.hit()
+                } else {
+                    bounceWith( other )
                 }
+
             }
         }
-
     }
 
-    void bounceWith( Bounces other ) {
-        def impact
+    void bounceWith( Role other ) {
+
+        Vector2d otherVelocity
+        double otherMass
+
+        // Only AlienShips have a velocity and mass (Ship and Shield don't),
+        // so we need to treat them differently.
         if ( other instanceof AlienShip ) {
-            impact = CollisionKt.circularCollision(
-                actor.position, velocity, mass,
-                other.actor.position, other.velocity, other.mass )
+            otherVelocity = other.velocity
+            otherMass = other.mass
         } else {
-            impact = CollisionKt.circularCollision(
-                actor.position, velocity, mass,
-                other.actor.position, new Vector2d(0,0), 100 )
+            otherVelocity = new Vector2d( 0,0 ) // Assume they aren't moving
+            otherMass = 1000 // Very heavy, so the AliedShip bouces away
         }
-        
-        spin += rand.plusMinus( impact )
+
+        // Collides two obects, as if they were perfectly round, without friction.
+        // The resulting "impact" is high for fast, head-on collisions, and low for
+        // slow or glancing collisions.
+        def impact = CollisionKt.circularCollision(
+                actor.position, velocity, mass,
+                other.actor.position, otherVelocity, otherMass )
+
+        // Changes the rate we are spinning by a random amount
+        // This isn't anything like physically correct! However, it make the game look good ;-)
+        spin += Rand.plusMinus( impact )
+
+        // Let the other guy know that it has been bounced (it may emit a sound, or change spin etc).
         other.bounce(impact)
+    }
+
+    // Called when another AlienShip bounces against this one.
+    void bounce( double impact ) {
+        spin += Rand.plusMinus( impact )
     }
 
     void fire() {
@@ -129,10 +172,6 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
             Game.instance.producer.score += points
             actor.role = new DyingWithShrapnel()
         }
-    }
-
-    void bounce( double impact ) {
-        spin += rand.plusMinus( impact )
     }
 
 }

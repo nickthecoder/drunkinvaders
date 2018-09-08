@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "about"
+      "value": "earth3"
     }
   ],
   "background": "#000000",
@@ -146,6 +146,14 @@
             {
               "name": "bulletSpeed",
               "value": "3"
+            },
+            {
+              "name": "spacingX",
+              "value": "50"
+            },
+            {
+              "name": "spacingY",
+              "value": "60"
             }
           ]
         },

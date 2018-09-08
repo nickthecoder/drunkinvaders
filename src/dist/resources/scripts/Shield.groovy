@@ -13,7 +13,10 @@ class Shield extends AbstractRole implements Alien, Human, Bounces {
     }
 
     void bounce( double impact ) {
-        actor.role = new Dying()
+        // Have we been hit hard enough to be destroyed?
+        if (impact > 0.5) {
+            actor.role = new Dying()
+        }
     }
 
 }
