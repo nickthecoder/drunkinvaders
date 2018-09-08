@@ -1,0 +1,356 @@
+{
+  "director": "uk.co.nickthecoder.tickle.NoDirector",
+  "background": "#000000",
+  "showMouse": true,
+  "layout": "default",
+  "snapToGrid": {
+    "enabled": false,
+    "xSpacing": 50,
+    "ySpacing": 50,
+    "xOffset": 0,
+    "yOffset": 0,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapToGuides": {
+    "enabled": false,
+    "closeness": 5,
+    "x": [
+      
+    ],
+    "y": [
+      
+    ]
+  },
+  "snapToOthers": {
+    "enabled": true,
+    "xCloseness": 10,
+    "yCloseness": 10
+  },
+  "snapRotation": {
+    "enabled": true,
+    "step": 15,
+    "closeness": 15
+  },
+  "include": [
+    
+  ],
+  "stages": [
+    {
+      "name": "main",
+      "actors": [
+        {
+          "costume": "earth0",
+          "x": 220,
+          "y": 240,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5
+        },
+        {
+          "costume": "moon0",
+          "x": 466,
+          "y": 138,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5
+        },
+        {
+          "costume": "mars0",
+          "x": 517,
+          "y": 386,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5
+        },
+        {
+          "costume": "battle",
+          "x": 38,
+          "y": 167,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "earth1"
+            },
+            {
+              "name": "unlocked",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 78,
+          "y": 106,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "earth2"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 143,
+          "y": 66,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "earth3"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 237,
+          "y": 53,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "earth4"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 319,
+          "y": 80,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "earth5"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 392,
+          "y": 85,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "moon1"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 459,
+          "y": 56,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "moon2"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 526,
+          "y": 76,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "moon3"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 560,
+          "y": 135,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "moon4"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 503,
+          "y": 269,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "mars1"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 438,
+          "y": 297,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "mars2"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 402,
+          "y": 354,
+          "direction": 0,
+          "scaleX": 0.6,
+          "scaleY": 0.6,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "mars3"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 553,
+          "y": 206,
+          "direction": 0,
+          "scaleX": 0.5,
+          "scaleY": 0.5,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "moon5"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 437,
+          "y": 424,
+          "direction": 0,
+          "scaleX": 0.75,
+          "scaleY": 0.751,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "mar4"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "battle",
+          "x": 517,
+          "y": 386,
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "mars5"
+            },
+            {
+              "name": "unlocked",
+              "value": "false"
+            }
+          ]
+        },
+        {
+          "costume": "sceneButton",
+          "x": 10,
+          "y": 404,
+          "text": "Back",
+          "textColor": "#336633ff",
+          "textOutlineColor": "#00000000",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "menu"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

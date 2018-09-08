@@ -33,6 +33,7 @@ class Level extends AbstractDirector {
     void alienDied() {
         aliensRemaining --
         if (aliensRemaining <= 0) {
+            Game.instance.producer.unlockScene( nextScene )
             ended = true
         }
     }

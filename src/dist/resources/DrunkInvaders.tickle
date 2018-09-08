@@ -56,6 +56,10 @@
     {
       "name": "earth1",
       "file": "images/earth1.png"
+    },
+    {
+      "name": "earthMoonMars",
+      "file": "images/earthMoonMars.png"
     }
   ],
   "fonts": [
@@ -441,6 +445,61 @@
       "offsetY": 2,
       "direction": 0,
       "tiled": true
+    },
+    {
+      "name": "unlocked",
+      "texture": "graphics",
+      "left": 1,
+      "bottom": 361,
+      "right": 89,
+      "top": 272,
+      "offsetX": 44,
+      "offsetY": 44,
+      "direction": 0
+    },
+    {
+      "name": "locked",
+      "texture": "graphics",
+      "left": 94,
+      "bottom": 360,
+      "right": 182,
+      "top": 271,
+      "offsetX": 44,
+      "offsetY": 44,
+      "direction": 0
+    },
+    {
+      "name": "earth0",
+      "texture": "earthMoonMars",
+      "left": 9,
+      "bottom": 657,
+      "right": 652,
+      "top": 12,
+      "offsetX": 329,
+      "offsetY": 327,
+      "direction": 0
+    },
+    {
+      "name": "moon0",
+      "texture": "earthMoonMars",
+      "left": 688,
+      "bottom": 206,
+      "right": 880,
+      "top": 12,
+      "offsetX": 91,
+      "offsetY": 96,
+      "direction": 0
+    },
+    {
+      "name": "mars0",
+      "texture": "earthMoonMars",
+      "left": 681,
+      "bottom": 655,
+      "right": 1046,
+      "top": 298,
+      "offsetX": 180,
+      "offsetY": 179,
+      "direction": 0
     }
   ],
   "costumeGroups": [
@@ -536,6 +595,38 @@
               ]
             }
           ]
+        },
+        {
+          "name": "battle",
+          "role": "Battle",
+          "canRotate": false,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "unlocked",
+              "poses": [
+                "unlocked"
+              ]
+            },
+            {
+              "name": "default",
+              "poses": [
+                "locked"
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "unlocked",
+              "value": "false"
+            },
+            {
+              "name": "scene",
+              "value": ""
+            }
+          ]
         }
       ],
       "showInSceneEditor": true
@@ -555,6 +646,54 @@
               "name": "default",
               "poses": [
                 "earth1"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "mars0",
+          "role": "",
+          "canRotate": true,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "mars0"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "earth0",
+          "role": "",
+          "canRotate": true,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "earth0"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "moon0",
+          "role": "",
+          "canRotate": true,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "moon0"
               ]
             }
           ]
@@ -1287,6 +1426,62 @@
                   "color": "#ffffffff"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "mothershipFactory",
+          "role": "MothershipFactory",
+          "canRotate": true,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "mothership3"
+              ]
+            },
+            {
+              "name": "mothership",
+              "costumes": [
+                "mothership"
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "delay",
+              "value": "0"
+            },
+            {
+              "name": "ships",
+              "value": "3"
+            },
+            {
+              "name": "interval",
+              "value": "10"
+            },
+            {
+              "name": "mothershipBirthPeriod",
+              "value": "300"
+            },
+            {
+              "name": "mothershipMaxChildren",
+              "value": "10"
+            },
+            {
+              "name": "mothershipFireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "mothershipVelocity",
+              "value": "0.0x0.0"
+            },
+            {
+              "name": "mothershipBulletSpeed",
+              "value": "3"
             }
           ]
         }

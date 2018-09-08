@@ -15,5 +15,14 @@ class DrunkInvaders extends AbstractProducer {
     void begin() {
         pixel = new PixelOverlapping(200, 128 )
     }
+
+    boolean isSceneUnlocked( String sceneName ) {
+        return preferencesRoot().node( "scenes/" + sceneName ).getBoolean( "unlocked", false )
+    }
+
+    void unlockScene( String sceneName ) {
+        preferencesRoot().node( "scenes/" + sceneName ).set( "unlocked", true )
+    }
+
 }
 

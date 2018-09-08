@@ -59,7 +59,7 @@
         {
           "costume": "sceneButton",
           "x": 319,
-          "y": 308,
+          "y": 294,
           "text": "Play",
           "textHAlignment": "CENTER",
           "textVAlignment": "CENTER",
@@ -85,12 +85,13 @@
         },
         {
           "costume": "sceneButton",
-          "x": 314,
-          "y": 236,
+          "x": 74,
+          "y": 47,
           "text": "About",
           "textHAlignment": "CENTER",
           "textVAlignment": "CENTER",
-          "textColor": "#b3ccffff",
+          "textColor": "#336633ff",
+          "textOutlineColor": "#00000000",
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1,
@@ -206,6 +207,23 @@
           "direction": 345,
           "scaleX": 1,
           "scaleY": 1
+        },
+        {
+          "costume": "sceneButton",
+          "x": 170,
+          "y": 200,
+          "text": "Pick a Battle",
+          "textColor": "#b3ccffff",
+          "textOutlineColor": "#00000000",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "scene",
+              "value": "battles"
+            }
+          ]
         }
       ]
     }
