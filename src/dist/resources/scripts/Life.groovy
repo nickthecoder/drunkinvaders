@@ -11,8 +11,8 @@ import org.joml.Vector2d
 class Life extends AbstractRole {
 
     int index = 0
-    double bulletSpeed
-    int shieldTicks
+
+    Ship oldShip = null
 
     Action animation = null
 
@@ -20,18 +20,20 @@ class Life extends AbstractRole {
         if (animation != null) {
             if (animation.act()) {
                 Ship ship = new Ship()
-                actor.role = ship
-                ship.bulletSpeed = bulletSpeed
-                ship.shieldTicks = shieldTicks
+                ship.bulletSpeed = oldShip.bulletSpeed
+                ship.speedDegrees = oldShip.speedDegrees
+                ship.shieldTicks = oldShip.shieldTicks
+                ship.canMoveShielded = oldShip.canMoveShielded
+                ship.center.set( oldShip.center )
+                ship.radius = oldShip.radius
                 ship.shielded = true
+                actor.role = ship
             }
         }
     }
 
     void rebirth( Ship ship  ) {
-        this.bulletSpeed = ship.bulletSpeed
-        this.shieldTicks = ship.shieldTicks
-
+        oldShip = ship
         def seconds = 2
 
         // Flash on and off (this will be repeated, see below)

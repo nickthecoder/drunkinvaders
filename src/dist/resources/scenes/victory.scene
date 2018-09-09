@@ -47,29 +47,14 @@
       "actors": [
         {
           "costume": "quitButton",
-          "x": 577,
-          "y": 44,
+          "x": 620,
+          "y": 36,
           "text": "Quit",
+          "textHAlignment": "RIGHT",
           "textColor": "#b31a1aff",
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1
-        },
-        {
-          "costume": "sceneButton",
-          "x": 319,
-          "y": 294,
-          "text": "Play",
-          "textColor": "#b3ccffff",
-          "direction": 0,
-          "scaleX": 1,
-          "scaleY": 1,
-          "attributes": [
-            {
-              "name": "scene",
-              "value": "earth1"
-            }
-          ]
         },
         {
           "costume": "earth1",
@@ -81,8 +66,8 @@
         },
         {
           "costume": "sceneButton",
-          "x": 81,
-          "y": 45,
+          "x": 78,
+          "y": 47,
           "text": "About",
           "textColor": "#336633ff",
           "direction": 0,
@@ -98,11 +83,12 @@
         {
           "costume": "title",
           "x": 324,
-          "y": 463,
-          "text": "Drunk Invaders",
+          "y": 473,
+          "text": "VICTORY",
           "textHAlignment": "CENTER",
           "textVAlignment": "TOP",
           "textColor": "#b380b3ff",
+          "textOutlineColor": "#00000000",
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1
@@ -137,73 +123,15 @@
             },
             {
               "name": "message",
-              "value": "Welcome to Drunk Invaders"
+              "value": ""
             }
           ]
-        },
-        {
-          "costume": "mothership",
-          "x": 686,
-          "y": 460,
-          "direction": 270,
-          "scaleX": 1,
-          "scaleY": 1,
-          "attributes": [
-            {
-              "name": "birthPeriod",
-              "value": "60"
-            },
-            {
-              "name": "fireFrequency",
-              "value": "100"
-            },
-            {
-              "name": "velocity",
-              "value": "-3.0x0.0"
-            },
-            {
-              "name": "spin",
-              "value": "0"
-            },
-            {
-              "name": "bulletSpeed",
-              "value": "3"
-            },
-            {
-              "name": "maxChildren",
-              "value": "10"
-            }
-          ]
-        },
-        {
-          "costume": "shieldFactory",
-          "x": 116,
-          "y": 119,
-          "direction": 14.999999999999998,
-          "scaleX": 1,
-          "scaleY": 1
-        },
-        {
-          "costume": "shieldFactory",
-          "x": 323,
-          "y": 143,
-          "direction": 0,
-          "scaleX": 1,
-          "scaleY": 1
-        },
-        {
-          "costume": "shieldFactory",
-          "x": 497,
-          "y": 114,
-          "direction": 345,
-          "scaleX": 1,
-          "scaleY": 1
         },
         {
           "costume": "sceneButton",
-          "x": 329,
-          "y": 192,
-          "text": "Pick a Battle",
+          "x": 328,
+          "y": 152,
+          "text": "Menu",
           "textColor": "#b3ccffff",
           "direction": 0,
           "scaleX": 1,
@@ -211,9 +139,18 @@
           "attributes": [
             {
               "name": "scene",
-              "value": "battles"
+              "value": "menu"
             }
           ]
+        },
+        {
+          "costume": "plain",
+          "x": 112,
+          "y": 205,
+          "text": "The skies are clear. You have wiped out\nthe strange alien race.\n\nIt's a pitty you felt the need to kill them all.\nThey only wanted to buy more booze.",
+          "direction": 0,
+          "scaleX": 1,
+          "scaleY": 1
         }
       ]
     }

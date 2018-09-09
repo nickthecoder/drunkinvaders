@@ -60,6 +60,10 @@
     {
       "name": "earthMoonMars",
       "file": "images/earthMoonMars.png"
+    },
+    {
+      "name": "earth2",
+      "file": "images/earth2.jpg"
     }
   ],
   "fonts": [
@@ -500,6 +504,17 @@
       "offsetX": 180,
       "offsetY": 179,
       "direction": 0
+    },
+    {
+      "name": "earth2",
+      "texture": "earth2",
+      "left": 0,
+      "bottom": 479,
+      "right": 639,
+      "top": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "direction": 0
     }
   ],
   "costumeGroups": [
@@ -519,11 +534,17 @@
               "textStyles": [
                 {
                   "font": "blackCasper",
-                  "halign": "LEFT",
-                  "valign": "BOTTOM",
+                  "halign": "CENTER",
+                  "valign": "CENTER",
                   "color": "#ffffffff"
                 }
               ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "effects",
+              "value": "ButtonTwirls"
             }
           ]
         },
@@ -540,8 +561,8 @@
               "textStyles": [
                 {
                   "font": "blackCasper",
-                  "halign": "LEFT",
-                  "valign": "BOTTOM",
+                  "halign": "CENTER",
+                  "valign": "CENTER",
                   "color": "#ffffffff"
                 }
               ]
@@ -551,6 +572,10 @@
             {
               "name": "scene",
               "value": ""
+            },
+            {
+              "name": "effects",
+              "value": "ButtonTwirls"
             }
           ]
         },
@@ -579,7 +604,7 @@
           "name": "plain",
           "role": "",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 90,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -600,7 +625,7 @@
           "name": "battle",
           "role": "Battle",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -637,7 +662,7 @@
         {
           "name": "earth1",
           "role": "",
-          "canRotate": false,
+          "canRotate": true,
           "zOrder": 0,
           "initialEvent": "default",
           "showInSceneEditor": true,
@@ -697,6 +722,22 @@
               ]
             }
           ]
+        },
+        {
+          "name": "earth2",
+          "role": "",
+          "canRotate": true,
+          "zOrder": 0,
+          "initialEvent": "default",
+          "showInSceneEditor": true,
+          "events": [
+            {
+              "name": "default",
+              "poses": [
+                "earth2"
+              ]
+            }
+          ]
         }
       ],
       "showInSceneEditor": true
@@ -708,7 +749,7 @@
           "name": "bullet",
           "role": "Bullet",
           "canRotate": false,
-          "zOrder": 20,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": false,
           "events": [
@@ -724,7 +765,7 @@
           "name": "alienBullet",
           "role": "AlienBullet",
           "canRotate": false,
-          "zOrder": 20,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": false,
           "events": [
@@ -752,7 +793,7 @@
           "name": "shieldNW",
           "role": "Shield",
           "canRotate": false,
-          "zOrder": 30,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": false,
           "events": [
@@ -768,7 +809,7 @@
           "name": "shieldNE",
           "role": "Shield",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -784,7 +825,7 @@
           "name": "shield",
           "role": "Shield",
           "canRotate": false,
-          "zOrder": 30,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -800,7 +841,7 @@
           "name": "whiteShrapnel",
           "role": "Shrapnel",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": false,
           "events": [
@@ -816,7 +857,7 @@
           "name": "greenShrapnel",
           "role": "Shrapnel",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 60,
           "initialEvent": "default",
           "showInSceneEditor": false,
           "events": [
@@ -832,7 +873,7 @@
           "name": "redShrapnel",
           "role": "Shrapnel",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 60,
           "initialEvent": "default",
           "showInSceneEditor": false,
           "events": [
@@ -848,7 +889,7 @@
           "name": "life",
           "role": "Life",
           "canRotate": true,
-          "zOrder": 0,
+          "zOrder": 80,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "inheritsEventsFrom": "ship",
@@ -898,7 +939,7 @@
           "name": "whiteBubble",
           "role": "",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 98,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -926,7 +967,7 @@
           "name": "alien1",
           "role": "AlienShip",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -982,7 +1023,7 @@
           "name": "alien2",
           "role": "AlienShip",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "inheritsEventsFrom": "alien1",
@@ -1027,7 +1068,7 @@
           "name": "alien3",
           "role": "AlienShip",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "inheritsEventsFrom": "alien1",
@@ -1068,7 +1109,7 @@
           "name": "mothership",
           "role": "Mothership",
           "canRotate": true,
-          "zOrder": 40,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "inheritsEventsFrom": "alien1",
@@ -1143,7 +1184,7 @@
           "name": "alienFactory",
           "role": "AlienFactory",
           "canRotate": true,
-          "zOrder": 0,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -1202,6 +1243,14 @@
               "value": "5"
             },
             {
+              "name": "spacingX",
+              "value": "50"
+            },
+            {
+              "name": "spacingY",
+              "value": "60"
+            },
+            {
               "name": "alienSpeed",
               "value": "3"
             },
@@ -1219,7 +1268,7 @@
           "name": "shieldFactory",
           "role": "ShieldFactory",
           "canRotate": true,
-          "zOrder": 20,
+          "zOrder": 40,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -1379,7 +1428,7 @@
           "name": "lifeFactory",
           "role": "LifeFactory",
           "canRotate": true,
-          "zOrder": 0,
+          "zOrder": 90,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "inheritsEventsFrom": "ship",
@@ -1412,7 +1461,7 @@
           "name": "score",
           "role": "Score",
           "canRotate": false,
-          "zOrder": 0,
+          "zOrder": 90,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [
@@ -1433,7 +1482,7 @@
           "name": "mothershipFactory",
           "role": "MothershipFactory",
           "canRotate": true,
-          "zOrder": 0,
+          "zOrder": 50,
           "initialEvent": "default",
           "showInSceneEditor": true,
           "events": [

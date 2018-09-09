@@ -335,11 +335,10 @@
         },
         {
           "costume": "sceneButton",
-          "x": 10,
-          "y": 404,
+          "x": 69,
+          "y": 430,
           "text": "Back",
           "textColor": "#336633ff",
-          "textOutlineColor": "#00000000",
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1,

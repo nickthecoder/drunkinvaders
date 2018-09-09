@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "about"
+      "value": "earth4"
     }
   ],
   "background": "#000000",
@@ -113,8 +113,8 @@
         },
         {
           "costume": "alienFactory",
-          "x": 101,
-          "y": 417,
+          "x": 103,
+          "y": 416,
           "direction": 264.9203921399854,
           "scaleX": 1,
           "scaleY": 1,
