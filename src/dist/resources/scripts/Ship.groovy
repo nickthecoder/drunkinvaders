@@ -160,6 +160,7 @@ class Ship extends AbstractRole implements Human, Bounces {
 
     // Called when hit by an AlienBullet, or an AlienShip
     void hit() {
+        actor.event("die")
         actor.role = new DyingWithShrapnel(100)
 
         // If there were more than one ship, then, just let this one die, and carry on with

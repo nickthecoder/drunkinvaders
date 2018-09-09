@@ -168,6 +168,7 @@ class AlienShip extends AbstractRole implements Alien, Bounces {
         if ( actor.scaleXY > 1 ) {
             scaleAction = new Scale( actor, 1, actor.scaleXY * 0.9, Eases.easeInOut )
         } else {
+            actor.event( "die" )
             Game.instance.director.alienDied()
             Game.instance.producer.score += points
             actor.role = new DyingWithShrapnel()

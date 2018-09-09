@@ -9,6 +9,8 @@ class ButtonTwirls extends ExampleButtonEffects {
 
     Action clicked(Button button) {
         return super.clicked( button ).and (
+                new EventAction( button.actor, "click" )
+            ). and (
                 new MoveTo(
                     button.actor.position,
                     0.5,

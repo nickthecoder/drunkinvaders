@@ -65,6 +65,7 @@ class AlienBullet extends AbstractRole implements Alien {
 
     // Called when we've been hit by a (human) Bullet
     void hit() {
+        actor.event("die")
         actor.die()
     }
 

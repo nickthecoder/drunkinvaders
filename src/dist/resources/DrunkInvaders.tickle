@@ -517,6 +517,44 @@
       "direction": 0
     }
   ],
+  "sounds": [
+    {
+      "name": "ahh1",
+      "file": "sounds/ahh1.ogg"
+    },
+    {
+      "name": "ahh2",
+      "file": "sounds/ahh2.ogg"
+    },
+    {
+      "name": "ahh3",
+      "file": "sounds/ahh3.ogg"
+    },
+    {
+      "name": "ahh4",
+      "file": "sounds/ahh4.ogg"
+    },
+    {
+      "name": "explode",
+      "file": "sounds/explode.ogg"
+    },
+    {
+      "name": "fire",
+      "file": "sounds/fire.ogg"
+    },
+    {
+      "name": "ricochet",
+      "file": "sounds/ricochet.ogg"
+    },
+    {
+      "name": "pop",
+      "file": "sounds/pop.ogg"
+    },
+    {
+      "name": "shatter",
+      "file": "sounds/shatter.ogg"
+    }
+  ],
   "costumeGroups": [
     {
       "name": "menu",
@@ -538,6 +576,12 @@
                   "valign": "CENTER",
                   "color": "#ffffffff"
                 }
+              ]
+            },
+            {
+              "name": "click",
+              "sounds": [
+                "shatter"
               ]
             }
           ],
@@ -565,6 +609,12 @@
                   "valign": "CENTER",
                   "color": "#ffffffff"
                 }
+              ]
+            },
+            {
+              "name": "click",
+              "sounds": [
+                "pop"
               ]
             }
           ],
@@ -780,6 +830,12 @@
               "poses": [
                 "alienBullet2"
               ]
+            },
+            {
+              "name": "die",
+              "sounds": [
+                "ricochet"
+              ]
             }
           ],
           "attributes": [
@@ -994,6 +1050,12 @@
               "costumes": [
                 "whiteShrapnel"
               ]
+            },
+            {
+              "name": "die",
+              "sounds": [
+                "ahh1"
+              ]
             }
           ],
           "attributes": [
@@ -1039,6 +1101,12 @@
               "poses": [
                 "alien2b"
               ]
+            },
+            {
+              "name": "die",
+              "sounds": [
+                "ahh2"
+              ]
             }
           ],
           "attributes": [
@@ -1083,6 +1151,12 @@
               "name": "frame1",
               "poses": [
                 "alien3b"
+              ]
+            },
+            {
+              "name": "die",
+              "sounds": [
+                "ahh3"
               ]
             }
           ],
@@ -1144,6 +1218,12 @@
               "name": "frame2",
               "poses": [
                 "mothership2"
+              ]
+            },
+            {
+              "name": "die",
+              "sounds": [
+                "ahh4"
               ]
             }
           ],
@@ -1394,6 +1474,18 @@
               "name": "bubble",
               "costumes": [
                 "whiteBubble"
+              ]
+            },
+            {
+              "name": "die",
+              "sounds": [
+                "explode"
+              ]
+            },
+            {
+              "name": "fire",
+              "sounds": [
+                "fire"
               ]
             }
           ],
