@@ -1,6 +1,10 @@
 import uk.co.nickthecoder.tickle.*
 import uk.co.nickthecoder.tickle.collision.PixelOverlapping
 
+// There is only ever one instance of this class. Tickle creates it when the resources
+// file "drunkInvaders.tickle" is loaded.
+// See "Game Info" in the Tickle editor.
+
 class DrunkInvaders extends AbstractProducer {
 
     // Reset when returning to the menu
@@ -13,15 +17,20 @@ class DrunkInvaders extends AbstractProducer {
     def pixel
 
     void begin() {
-        pixel = new PixelOverlapping(200, 128 )
+        // Note, if we have bigger objects later, then we'll need to increase the size.
+        pixel = new PixelOverlapping( 200 /*size*/ , 128 /*threshold*/ )
     }
 
-    boolean isSceneUnlocked( String sceneName ) {
-        return preferencesRoot().node( "scenes/" + sceneName ).getBoolean( "unlocked", false )
-    }
-
+    // Stores a boolean indicating that the scene has been completed, and is therefore unlocked
+    // i.e. a player can start the game at that scene.
+    // The data is stored in the "Registry", so it available the next time the game is started.
     void unlockScene( String sceneName ) {
         preferencesRoot().node( "scenes/" + sceneName ).set( "unlocked", true )
+    }
+
+    // Reads the data from the registry, which may have been written by unlockScene (above).
+    boolean isSceneUnlocked( String sceneName ) {
+        return preferencesRoot().node( "scenes/" + sceneName ).getBoolean( "unlocked", false )
     }
 
 }

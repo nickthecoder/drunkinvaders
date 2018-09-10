@@ -26,6 +26,7 @@ class Mothership extends AlienShip {
         if (maxChildren > 0 && Rand.oneIn( birthPeriod )) {
 
             maxChildren --
+            actor.event( "birth" )
             Actor shipA = actor.createChild( "child" )
 
             // Make the child come out from the bottom of the mothership

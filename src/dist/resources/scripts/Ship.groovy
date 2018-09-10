@@ -41,7 +41,6 @@ class Ship extends AbstractRole implements Human, Bounces {
     def right   // Right arrow key ans "D"
     def fire    // Space, Return, Up arrow key and "W"
     def shield  // Ctrl, Shift, Down arrow key and "S"
-    def suicide
 
     // Our bullet's Actor (not the Role).
     // Set in fire(), and set back to null in tick(), after the bullet has died
@@ -54,7 +53,6 @@ class Ship extends AbstractRole implements Human, Bounces {
         right = Resources.instance.inputs.find("right")
         fire = Resources.instance.inputs.find("fire")
         shield = Resources.instance.inputs.find("shield")
-        suicide = Resources.instance.inputs.find("escape")
 
         orbit = actor.position.distance( center )
         actor.direction.radians = Angle.radiansOf( actor.position, center )
@@ -66,10 +64,6 @@ class Ship extends AbstractRole implements Human, Bounces {
 
     // Called 60 times per second. Check the keyboard inputs, and act appropriately.
     void tick() {
-
-        if (suicide.isPressed()) {
-            hit()
-        }
 
         if (shield.isPressed() && shieldUsed < shieldTicks) {
 

@@ -1,5 +1,5 @@
 import uk.co.nickthecoder.tickle.*
-import uk.co.nickthecoder.tickle.resources.*
+import uk.co.nickthecoder.tickle.action.*
 import uk.co.nickthecoder.tickle.util.*
 import org.joml.*
 
@@ -8,7 +8,7 @@ import org.joml.*
 //
 // The AlienShips are not created all at once, but one after another (with a delay).
 
-class AlienFactory extends AbstractRole {
+class AlienFactory extends ActionRole {
 
     // Public attributes (Can be changed in the SceneEditor)
 
@@ -23,12 +23,12 @@ class AlienFactory extends AbstractRole {
     // The initial delay before the first AlienShip is created
     // Measured in ticks (1/60th of a second)
     @Attribute
-    public double countdown = 20
+    public double initialDelay = 1
 
     // The delay between creating one AlienShip and the next.
     // Measured in ticks (1/60th of a second)
     @Attribute
-    public double delay = 5
+    public double delay = 0.1
 
     // The distance between the rows. Note, could be negative to create them right to left.
     @Attribute
@@ -59,42 +59,45 @@ class AlienFactory extends AbstractRole {
     def aliens = new ArrayList()
 
     void activated() {
+        super.activated()
         // We don't want to SEE the AlienFactory while the game is playing.
         actor.hide()
     }
 
-    void tick() {
-        countdown --
-        if ( countdown <= 0 ) {
+    Action createAction() {
+        return new Delay( initialDelay )
+            .then( 
+                ( new Do( { createShip() } ).then( new Delay( delay ) ) ).repeat( down * across )
+            )
+            .then( new Do( { setInMotion() } ) )
+            .then( new Kill(actor) )
+    }
 
-            // Create a new alien
-            def alienA = actor.createChild("row" + y)
-            alienA.direction.radians = actor.direction.radians
-            alienA.moveSidewards( - x * spacingX )
-            alienA.moveForwards( y * spacingY )
-            aliens.add( alienA.role )
-            // Note, at this point, the AlienShip's velocity will be (0,0), so it won't move.
+    void createShip() {
 
-            x ++
-            if ( x >= across ) {
-                // Move to the next row.
-                x = 0
-                y ++
-                if ( y >= down ) {
-                    // All aliens created. Let's set them in motion
-                    for ( def alien in aliens ) {
-                         alien.velocity.set( actor.direction.vector().perpendicular().mul( -alienSpeed ) )
-                         alien.fireFrequency = fireFrequency
-                         alien.bulletSpeed = bulletSpeed
-                    }
-                    // The AlienFactory has done its job!
-                    actor.die()
-                }
-            }
-            // Wait for "delay" ticks till we create the next AlienShip.
-            countdown = delay
+        actor.event( "birth" )
+        def alienA = actor.createChild("row" + y)
+        alienA.direction.radians = actor.direction.radians
+        alienA.moveSidewards( - x * spacingX )
+        alienA.moveForwards( y * spacingY )
+        aliens.add( alienA.role )
+        // Note, at this point, the AlienShip's velocity will be (0,0), so it won't move.
+
+        x ++
+        if ( x >= across ) {
+            // Move to the next row.
+            x = 0
+            y ++
         }
+    }
 
+    void setInMotion() {
+        // All aliens created. Let's set them in motion
+        for ( def alien in aliens ) {
+             alien.velocity.set( actor.direction.vector().perpendicular().mul( -alienSpeed ) )
+             alien.fireFrequency = fireFrequency
+             alien.bulletSpeed = bulletSpeed
+        }
     }
 
 }

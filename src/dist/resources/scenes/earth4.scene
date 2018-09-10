@@ -112,12 +112,8 @@
               "value": "2"
             },
             {
-              "name": "countdown",
-              "value": "20"
-            },
-            {
               "name": "delay",
-              "value": "5"
+              "value": "0.1"
             },
             {
               "name": "fireFrequency",
@@ -138,6 +134,10 @@
             {
               "name": "spacingY",
               "value": "60"
+            },
+            {
+              "name": "initialDelay",
+              "value": "1"
             }
           ]
         },

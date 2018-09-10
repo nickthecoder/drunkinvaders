@@ -5,6 +5,7 @@ import uk.co.nickthecoder.tickle.action.movement.*
 import uk.co.nickthecoder.tickle.action.animation.*
 import org.joml.*
 
+// Animates Buttons. Used with the buttons with costumes quitButton, sceneButton.
 class ButtonTwirls extends ExampleButtonEffects {
 
     Action clicked(Button button) {
@@ -25,6 +26,10 @@ class ButtonTwirls extends ExampleButtonEffects {
                     Eases.easeIn
                 )
             )
+    }
+
+    Action enter( Button button) {
+        return new EventAction( button.actor, "enter" ).and( super.enter( button ) )
     }
 }
 

@@ -583,6 +583,12 @@
               "sounds": [
                 "shatter"
               ]
+            },
+            {
+              "name": "enter",
+              "sounds": [
+                "pop"
+              ]
             }
           ],
           "attributes": [
@@ -613,6 +619,12 @@
             },
             {
               "name": "click",
+              "sounds": [
+                "fire"
+              ]
+            },
+            {
+              "name": "enter",
               "sounds": [
                 "pop"
               ]
@@ -700,6 +712,10 @@
             {
               "name": "scene",
               "value": ""
+            },
+            {
+              "name": "effects",
+              "value": "ButtonTwirls"
             }
           ]
         }
@@ -1225,6 +1241,12 @@
               "sounds": [
                 "ahh4"
               ]
+            },
+            {
+              "name": "birth",
+              "sounds": [
+                "pop"
+              ]
             }
           ],
           "attributes": [
@@ -1303,6 +1325,12 @@
               "costumes": [
                 "alien3"
               ]
+            },
+            {
+              "name": "birth",
+              "sounds": [
+                "pop"
+              ]
             }
           ],
           "attributes": [
@@ -1315,8 +1343,8 @@
               "value": "2"
             },
             {
-              "name": "countdown",
-              "value": "20"
+              "name": "initialDelay",
+              "value": "1"
             },
             {
               "name": "delay",
