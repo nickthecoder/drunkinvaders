@@ -6,4 +6,3 @@
 interface Alien {
     void hit()
 }
-

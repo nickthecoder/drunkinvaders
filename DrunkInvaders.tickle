@@ -18,7 +18,7 @@
     ],
     "treeThumbnailSize": 24,
     "costumePickerThumbnailSize": 40,
-    "isMaximized": false,
+    "isMaximized": true,
     "windowWidth": 1000,
     "windowHeight": 600,
     "apiURL": "http://nickthecoder.co.uk/public/tickle/api-0.1/tickle-core/"
@@ -64,6 +64,10 @@
     {
       "name": "earth2",
       "file": "images/earth2.jpg"
+    },
+    {
+      "name": "fragments",
+      "file": "images/fragments.png"
     }
   ],
   "fonts": [
@@ -515,6 +519,346 @@
       "offsetX": 0,
       "offsetY": 0,
       "direction": 0
+    },
+    {
+      "name": "ship-fragment1",
+      "texture": "fragments",
+      "left": 0,
+      "bottom": 25,
+      "right": 32,
+      "top": 0,
+      "offsetX": 7,
+      "offsetY": 2,
+      "direction": 90,
+      "snapPoints": [
+        {
+          "x": 16,
+          "y": 12
+        }
+      ]
+    },
+    {
+      "name": "ship-fragment2",
+      "texture": "fragments",
+      "left": 0,
+      "bottom": 53,
+      "right": 21,
+      "top": 25,
+      "offsetX": 15,
+      "offsetY": 9,
+      "direction": 90,
+      "snapPoints": [
+        {
+          "x": 10,
+          "y": 12
+        }
+      ]
+    },
+    {
+      "name": "ship-fragment3",
+      "texture": "fragments",
+      "left": 0,
+      "bottom": 74,
+      "right": 19,
+      "top": 53,
+      "offsetX": 29,
+      "offsetY": 9,
+      "direction": 90,
+      "snapPoints": [
+        {
+          "x": 8,
+          "y": 11
+        }
+      ]
+    },
+    {
+      "name": "ship-fragment4",
+      "texture": "fragments",
+      "left": 32,
+      "bottom": 17,
+      "right": 67,
+      "top": 0,
+      "offsetX": 7,
+      "offsetY": 9,
+      "direction": 90,
+      "snapPoints": [
+        {
+          "x": 23,
+          "y": 6
+        }
+      ]
+    },
+    {
+      "name": "alien1-fragment1",
+      "texture": "fragments",
+      "left": 0,
+      "bottom": 93,
+      "right": 25,
+      "top": 74,
+      "offsetX": 13,
+      "offsetY": -1,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 12,
+          "y": 10
+        }
+      ]
+    },
+    {
+      "name": "alien1-fragment2",
+      "texture": "fragments",
+      "left": 32,
+      "bottom": 45,
+      "right": 48,
+      "top": 17,
+      "offsetX": -3,
+      "offsetY": 17,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 10,
+          "y": 11
+        }
+      ]
+    },
+    {
+      "name": "alien1-fragment3",
+      "texture": "fragments",
+      "left": 32,
+      "bottom": 68,
+      "right": 64,
+      "top": 45,
+      "offsetX": 18,
+      "offsetY": 13,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 19,
+          "y": 13
+        }
+      ]
+    },
+    {
+      "name": "alien1-fragment4",
+      "texture": "fragments",
+      "left": 32,
+      "bottom": 86,
+      "right": 54,
+      "top": 68,
+      "offsetX": 18,
+      "offsetY": 17,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 9,
+          "y": 9
+        }
+      ]
+    },
+    {
+      "name": "alien2-fragment1",
+      "texture": "fragments",
+      "left": 67,
+      "bottom": 33,
+      "right": 110,
+      "top": 0,
+      "offsetX": 20,
+      "offsetY": 14,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 22,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "name": "alien2-fragment2",
+      "texture": "fragments",
+      "left": 67,
+      "bottom": 65,
+      "right": 84,
+      "top": 33,
+      "offsetX": -8,
+      "offsetY": 13,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 9,
+          "y": 17
+        }
+      ]
+    },
+    {
+      "name": "alien2-fragment3",
+      "texture": "fragments",
+      "left": 67,
+      "bottom": 83,
+      "right": 101,
+      "top": 65,
+      "offsetX": 24,
+      "offsetY": 8,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 18,
+          "y": 9
+        }
+      ]
+    },
+    {
+      "name": "alien2-fragment4",
+      "texture": "fragments",
+      "left": 67,
+      "bottom": 99,
+      "right": 107,
+      "top": 83,
+      "offsetX": 24,
+      "offsetY": 18,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 19,
+          "y": 8
+        }
+      ]
+    },
+    {
+      "name": "alien3-fragment1",
+      "texture": "fragments",
+      "left": 110,
+      "bottom": 33,
+      "right": 147,
+      "top": 0,
+      "offsetX": 22,
+      "offsetY": 14,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 23,
+          "y": 20
+        }
+      ]
+    },
+    {
+      "name": "alien3-fragment2",
+      "texture": "fragments",
+      "left": 84,
+      "bottom": 60,
+      "right": 104,
+      "top": 33,
+      "offsetX": 10,
+      "offsetY": 12,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 9,
+          "y": 15
+        }
+      ]
+    },
+    {
+      "name": "alien3-fragment3",
+      "texture": "fragments",
+      "left": 110,
+      "bottom": 66,
+      "right": 126,
+      "top": 33,
+      "offsetX": -11,
+      "offsetY": 18,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 8,
+          "y": 17
+        }
+      ]
+    },
+    {
+      "name": "alien3-fragment4",
+      "texture": "fragments",
+      "left": 126,
+      "bottom": 63,
+      "right": 147,
+      "top": 33,
+      "offsetX": 26,
+      "offsetY": 18,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 8,
+          "y": 15
+        }
+      ]
+    },
+    {
+      "name": "mothership-fragment1",
+      "texture": "fragments",
+      "left": 110,
+      "bottom": 100,
+      "right": 145,
+      "top": 66,
+      "offsetX": 14,
+      "offsetY": 15,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 18,
+          "y": 21
+        }
+      ]
+    },
+    {
+      "name": "mothership-fragment2",
+      "texture": "fragments",
+      "left": 147,
+      "bottom": 33,
+      "right": 171,
+      "top": 0,
+      "offsetX": 36,
+      "offsetY": 15,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 12,
+          "y": 16
+        }
+      ]
+    },
+    {
+      "name": "mothership-fragment3",
+      "texture": "fragments",
+      "left": 171,
+      "bottom": 28,
+      "right": 199,
+      "top": 0,
+      "offsetX": -6,
+      "offsetY": 12,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 14,
+          "y": 15
+        }
+      ]
+    },
+    {
+      "name": "mothership-fragment4",
+      "texture": "fragments",
+      "left": 147,
+      "bottom": 60,
+      "right": 171,
+      "top": 33,
+      "offsetX": 18,
+      "offsetY": 14,
+      "direction": -90,
+      "snapPoints": [
+        {
+          "x": 11,
+          "y": 13
+        }
+      ]
     }
   ],
   "sounds": [
@@ -1072,6 +1416,15 @@
               "sounds": [
                 "ahh1"
               ]
+            },
+            {
+              "name": "fragments",
+              "poses": [
+                "alien1-fragment1",
+                "alien1-fragment2",
+                "alien1-fragment3",
+                "alien1-fragment4"
+              ]
             }
           ],
           "attributes": [
@@ -1123,6 +1476,15 @@
               "sounds": [
                 "ahh2"
               ]
+            },
+            {
+              "name": "fragments",
+              "poses": [
+                "alien2-fragment1",
+                "alien2-fragment2",
+                "alien2-fragment3",
+                "alien2-fragment4"
+              ]
             }
           ],
           "attributes": [
@@ -1173,6 +1535,15 @@
               "name": "die",
               "sounds": [
                 "ahh3"
+              ]
+            },
+            {
+              "name": "fragments",
+              "poses": [
+                "alien3-fragment1",
+                "alien3-fragment2",
+                "alien3-fragment3",
+                "alien3-fragment4"
               ]
             }
           ],
@@ -1246,6 +1617,15 @@
               "name": "birth",
               "sounds": [
                 "pop"
+              ]
+            },
+            {
+              "name": "fragments",
+              "poses": [
+                "mothership-fragment1",
+                "mothership-fragment2",
+                "mothership-fragment3",
+                "mothership-fragment4"
               ]
             }
           ],
@@ -1515,6 +1895,15 @@
               "sounds": [
                 "fire"
               ]
+            },
+            {
+              "name": "fragments",
+              "poses": [
+                "ship-fragment1",
+                "ship-fragment2",
+                "ship-fragment3",
+                "ship-fragment4"
+              ]
             }
           ],
           "attributes": [
@@ -1743,6 +2132,16 @@
           "state": "PRESSED"
         }
       ]
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ship.groovy",
+      "type": "SCRIPT"
+    },
+    {
+      "name": "DyingWithShrapnel.groovy",
+      "type": "SCRIPT"
     }
   ]
 }

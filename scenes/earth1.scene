@@ -83,7 +83,7 @@
             },
             {
               "name": "message",
-              "value": "Hello World.\nThis is long!"
+              "value": ""
             }
           ]
         },

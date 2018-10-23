@@ -27,6 +27,7 @@ class Life extends AbstractRole {
                 ship.center.set( oldShip.center )
                 ship.radius = oldShip.radius
                 ship.shielded = true
+                actor.costume = oldShip.actor.costume
                 actor.role = ship
             }
         }
