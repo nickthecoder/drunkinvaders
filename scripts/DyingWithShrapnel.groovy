@@ -30,11 +30,10 @@ class DyingWithShrapnel extends Dying {
             def shrapnelA = actor.createChild( "shrapnel" )
         }
 
-        FragmentMaker.createRoles(actor, "fragments", { actor, offset -> 
+        FragmentMaker.createActionRoles(actor, "fragments", { actor, offset -> 
             double seconds = 30.0
             new Move(actor.position, offset.mul(3))
-                //.and(new Accelerate(velocity, acceleration))
-                .and(new Turn(actor.direction, seconds, Angle.degrees(Rand.between( -1000, 1000 ))))
+                .and(new Turn(actor.direction, 1.0, Angle.degrees(Rand.between( -100, 100 ))).forever())
                 .whilst(new Fade(actor.color, seconds, 0f, Eases.easeInQuad))
                 .then(new Kill(actor))
         })
