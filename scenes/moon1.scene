@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "earth5"
+      "value": "about"
     }
   ],
   "background": "#000000",
@@ -47,19 +47,19 @@
       "actors": [
         {
           "costume": "ship",
-          "x": 114,
-          "y": 117,
+          "x": 118,
+          "y": 99,
           "direction": 45,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "center",
-              "value": "-70.0x-70.0"
+              "value": "550.0x480.0"
             },
             {
               "name": "speedDegrees",
-              "value": "0.4"
+              "value": "-0.4"
             },
             {
               "name": "bulletSpeed",
@@ -75,37 +75,41 @@
             },
             {
               "name": "message",
-              "value": ""
+              "value": "We're a long way\nfrom home now"
+            },
+            {
+              "name": "inwards",
+              "value": "true"
             }
           ]
         },
         {
           "costume": "shieldFactory",
-          "x": 252,
-          "y": 80,
-          "direction": 285,
+          "x": 268,
+          "y": 106,
+          "direction": 315,
           "scaleX": 1,
           "scaleY": 1
         },
         {
           "costume": "shieldFactory",
-          "x": 63,
-          "y": 245,
-          "direction": 345,
+          "x": 129,
+          "y": 252,
+          "direction": 300.00000000000006,
           "scaleX": 1,
           "scaleY": 1
         },
         {
           "costume": "alienFactory",
-          "x": 235,
-          "y": 426,
+          "x": 305,
+          "y": 420,
           "direction": 239.99999999999997,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "across",
-              "value": "3"
+              "value": "4"
             },
             {
               "name": "down",
@@ -170,8 +174,8 @@
         },
         {
           "costume": "mothershipFactory",
-          "x": 40,
-          "y": 511,
+          "x": 124,
+          "y": 544,
           "direction": 239.99999999999997,
           "scaleX": 1,
           "scaleY": 1,
@@ -211,9 +215,9 @@
           ]
         },
         {
-          "costume": "earth2",
-          "x": -70,
-          "y": -70,
+          "costume": "moon0",
+          "x": 549,
+          "y": 441,
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1

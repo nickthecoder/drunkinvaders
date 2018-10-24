@@ -11,6 +11,11 @@ class Ship extends AbstractRole implements Human, Bounces {
     @Attribute
     public Vector2d center = new Vector2d( 320, -1000 )
 
+    // Is the ship pointing INWARDS towards the center
+    // First used by scene moon1, where the moon is in the distance.
+    @Attribute
+    public boolean inwards = false
+
     // The speed the ship moves (in degrees, as we move in circles)
     @Attribute
     public double speedDegrees = 0.2
@@ -55,7 +60,10 @@ class Ship extends AbstractRole implements Human, Bounces {
         shield = Resources.instance.inputs.find("shield")
 
         orbit = actor.position.distance( center )
-        actor.direction.radians = Angle.radiansOf( actor.position, center )
+        if(inwards) {
+            orbit = -orbit
+        }
+        actor.direction.radians = inwards ? Angle.radiansOf( center, actor.position ) : Angle.radiansOf( actor.position, center )
 
         if (message!= "") {
             Talk.talk( actor, message, 3 )            

@@ -2140,8 +2140,32 @@
       "type": "SCRIPT"
     },
     {
-      "name": "DyingWithShrapnel.groovy",
+      "name": "moon1",
+      "type": "SCENE"
+    },
+    {
+      "name": "moon2",
+      "type": "SCENE"
+    },
+    {
+      "name": "battles",
+      "type": "SCENE"
+    },
+    {
+      "name": "Level.groovy",
       "type": "SCRIPT"
+    },
+    {
+      "name": "moon3",
+      "type": "SCENE"
+    },
+    {
+      "name": "moon4",
+      "type": "SCENE"
+    },
+    {
+      "name": "moon5",
+      "type": "SCENE"
     }
   ]
 }

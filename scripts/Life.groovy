@@ -25,6 +25,7 @@ class Life extends AbstractRole {
                 ship.shieldTicks = oldShip.shieldTicks
                 ship.canMoveShielded = oldShip.canMoveShielded
                 ship.center.set( oldShip.center )
+                ship.inwards= oldShip.inwards
                 ship.radius = oldShip.radius
                 ship.shielded = true
                 actor.costume = oldShip.actor.costume

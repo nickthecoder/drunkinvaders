@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "earth5"
+      "value": "about"
     }
   ],
   "background": "#000000",
@@ -47,15 +47,15 @@
       "actors": [
         {
           "costume": "ship",
-          "x": 114,
-          "y": 117,
+          "x": 187,
+          "y": 169,
           "direction": 45,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "center",
-              "value": "-70.0x-70.0"
+              "value": "0.0x0.0"
             },
             {
               "name": "speedDegrees",
@@ -81,31 +81,31 @@
         },
         {
           "costume": "shieldFactory",
-          "x": 252,
-          "y": 80,
+          "x": 300,
+          "y": 116,
           "direction": 285,
           "scaleX": 1,
           "scaleY": 1
         },
         {
           "costume": "shieldFactory",
-          "x": 63,
-          "y": 245,
+          "x": 129,
+          "y": 280,
           "direction": 345,
           "scaleX": 1,
           "scaleY": 1
         },
         {
           "costume": "alienFactory",
-          "x": 235,
-          "y": 426,
+          "x": 305,
+          "y": 420,
           "direction": 239.99999999999997,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "across",
-              "value": "3"
+              "value": "4"
             },
             {
               "name": "down",
@@ -170,8 +170,8 @@
         },
         {
           "costume": "mothershipFactory",
-          "x": 40,
-          "y": 511,
+          "x": 124,
+          "y": 544,
           "direction": 239.99999999999997,
           "scaleX": 1,
           "scaleY": 1,
@@ -212,8 +212,8 @@
         },
         {
           "costume": "earth2",
-          "x": -70,
-          "y": -70,
+          "x": 0,
+          "y": 0,
           "direction": 0,
           "scaleX": 1,
           "scaleY": 1
