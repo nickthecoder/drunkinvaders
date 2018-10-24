@@ -1912,6 +1912,10 @@
               "value": "320.0x-1000.0"
             },
             {
+              "name": "inwards",
+              "value": "false"
+            },
+            {
               "name": "speedDegrees",
               "value": "0.2"
             },
@@ -2136,35 +2140,7 @@
   ],
   "tabs": [
     {
-      "name": "Ship.groovy",
-      "type": "SCRIPT"
-    },
-    {
-      "name": "moon1",
-      "type": "SCENE"
-    },
-    {
-      "name": "moon2",
-      "type": "SCENE"
-    },
-    {
-      "name": "battles",
-      "type": "SCENE"
-    },
-    {
-      "name": "Level.groovy",
-      "type": "SCRIPT"
-    },
-    {
-      "name": "moon3",
-      "type": "SCENE"
-    },
-    {
-      "name": "moon4",
-      "type": "SCENE"
-    },
-    {
-      "name": "moon5",
+      "name": "mars5",
       "type": "SCENE"
     }
   ]

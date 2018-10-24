@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "mars1"
+      "value": "mars2"
     }
   ],
   "background": "#000000",
@@ -47,19 +47,19 @@
       "actors": [
         {
           "costume": "ship",
-          "x": 549,
-          "y": 247,
-          "direction": 180,
+          "x": 522,
+          "y": 112,
+          "direction": 135,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "center",
-              "value": "760.0x240.0"
+              "value": "-15.0x575.0"
             },
             {
               "name": "speedDegrees",
-              "value": "1.2"
+              "value": "-0.4"
             },
             {
               "name": "bulletSpeed",
@@ -79,31 +79,31 @@
             },
             {
               "name": "inwards",
-              "value": "false"
+              "value": "true"
             }
           ]
         },
         {
           "costume": "shieldFactory",
-          "x": 464,
-          "y": 157,
-          "direction": 105,
+          "x": 541,
+          "y": 215,
+          "direction": 59.99999999999999,
           "scaleX": 1,
           "scaleY": 1
         },
         {
           "costume": "shieldFactory",
-          "x": 468,
-          "y": 332,
-          "direction": 75.00000000000001,
+          "x": 395,
+          "y": 76,
+          "direction": 29.999999999999996,
           "scaleX": 1,
           "scaleY": 1
         },
         {
           "costume": "alienFactory",
-          "x": 193,
-          "y": 83,
-          "direction": 14.999999999999998,
+          "x": 41,
+          "y": 353,
+          "direction": 300.00000000000006,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
@@ -174,9 +174,9 @@
         },
         {
           "costume": "mothershipFactory",
-          "x": 189,
-          "y": 548,
-          "direction": 345,
+          "x": -77,
+          "y": 124,
+          "direction": 300.00000000000006,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
@@ -206,7 +206,7 @@
             },
             {
               "name": "mothershipVelocity",
-              "value": "-0.2x-3.0"
+              "value": "4.0x1.0"
             },
             {
               "name": "mothershipBulletSpeed",
@@ -215,12 +215,12 @@
           ]
         },
         {
-          "costume": "moon0",
-          "x": 760,
-          "y": 240,
+          "costume": "mars0",
+          "x": -15,
+          "y": 575,
           "direction": 0,
-          "scaleX": 2,
-          "scaleY": 2
+          "scaleX": 1,
+          "scaleY": 1
         }
       ]
     }

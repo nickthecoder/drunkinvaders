@@ -3,7 +3,7 @@
   "directorAttributes": [
     {
       "name": "nextScene",
-      "value": "mars1"
+      "value": "about"
     }
   ],
   "background": "#000000",
@@ -47,19 +47,19 @@
       "actors": [
         {
           "costume": "ship",
-          "x": 549,
-          "y": 247,
-          "direction": 180,
+          "x": 301,
+          "y": 28,
+          "direction": 90,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "center",
-              "value": "760.0x240.0"
+              "value": "300.0x240.0"
             },
             {
               "name": "speedDegrees",
-              "value": "1.2"
+              "value": "-0.8"
             },
             {
               "name": "bulletSpeed",
@@ -79,41 +79,25 @@
             },
             {
               "name": "inwards",
-              "value": "false"
+              "value": "true"
             }
           ]
         },
         {
-          "costume": "shieldFactory",
-          "x": 464,
-          "y": 157,
-          "direction": 105,
-          "scaleX": 1,
-          "scaleY": 1
-        },
-        {
-          "costume": "shieldFactory",
-          "x": 468,
-          "y": 332,
-          "direction": 75.00000000000001,
-          "scaleX": 1,
-          "scaleY": 1
-        },
-        {
           "costume": "alienFactory",
-          "x": 193,
-          "y": 83,
-          "direction": 14.999999999999998,
+          "x": 148,
+          "y": 374,
+          "direction": 270,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "across",
-              "value": "5"
+              "value": "4"
             },
             {
               "name": "down",
-              "value": "3"
+              "value": "4"
             },
             {
               "name": "delay",
@@ -174,19 +158,19 @@
         },
         {
           "costume": "mothershipFactory",
-          "x": 189,
-          "y": 548,
-          "direction": 345,
+          "x": -115,
+          "y": 165,
+          "direction": 255,
           "scaleX": 1,
           "scaleY": 1,
           "attributes": [
             {
               "name": "delay",
-              "value": "0"
+              "value": "3"
             },
             {
               "name": "ships",
-              "value": "3"
+              "value": "10"
             },
             {
               "name": "interval",
@@ -206,7 +190,7 @@
             },
             {
               "name": "mothershipVelocity",
-              "value": "-0.2x-3.0"
+              "value": "3.0x-1.0"
             },
             {
               "name": "mothershipBulletSpeed",
@@ -215,12 +199,100 @@
           ]
         },
         {
-          "costume": "moon0",
-          "x": 760,
+          "costume": "mars0",
+          "x": 300,
           "y": 240,
           "direction": 0,
-          "scaleX": 2,
-          "scaleY": 2
+          "scaleX": 2.5,
+          "scaleY": 2.5
+        },
+        {
+          "costume": "mothershipFactory",
+          "x": 696,
+          "y": 217,
+          "direction": 285,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "delay",
+              "value": "2"
+            },
+            {
+              "name": "ships",
+              "value": "10"
+            },
+            {
+              "name": "interval",
+              "value": "10"
+            },
+            {
+              "name": "mothershipBirthPeriod",
+              "value": "300"
+            },
+            {
+              "name": "mothershipMaxChildren",
+              "value": "10"
+            },
+            {
+              "name": "mothershipFireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "mothershipVelocity",
+              "value": "-3.0x-2.0"
+            },
+            {
+              "name": "mothershipBulletSpeed",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "costume": "alienFactory",
+          "x": 250,
+          "y": 370,
+          "direction": -90,
+          "scaleX": 1,
+          "scaleY": 1,
+          "attributes": [
+            {
+              "name": "across",
+              "value": "3"
+            },
+            {
+              "name": "down",
+              "value": "2"
+            },
+            {
+              "name": "initialDelay",
+              "value": "20"
+            },
+            {
+              "name": "delay",
+              "value": "0.1"
+            },
+            {
+              "name": "spacingX",
+              "value": "50"
+            },
+            {
+              "name": "spacingY",
+              "value": "60"
+            },
+            {
+              "name": "alienSpeed",
+              "value": "2"
+            },
+            {
+              "name": "fireFrequency",
+              "value": "100"
+            },
+            {
+              "name": "bulletSpeed",
+              "value": "3"
+            }
+          ]
         }
       ]
     }
